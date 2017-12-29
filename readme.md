@@ -1,55 +1,33 @@
-This worksheet, and all related files, are released CC-BY. 
+This workshop has been adapted from M. H. Beals's "TEI Close Reading" available at <https://github.com/mhbeals/TEI-Close-Reading>. 
 
-# Close Reading with TEI #
+# Unit: Text Encoding
 
-This workshop will explore a historical text and help you create a digital record of your analysis
+This workshop will explore a subset of the [Personal Correspondence, 1917-1919](http://www2.scc.rutgers.edu/ead/uarchives/warservicebureaub.html#series1) series of the Rutgers War Service Bureau records and help you to create a digital documentary edition of your letters.
 
-### Vetting a Website ###
+## Setting Up Your Workspace
 
-Visit the Recovered Histories Website at http://www.recoveredhistories.org
+You will be assigned a folder of correspondence organized by Rutgers alumnus. Each folder has a filename that corresponds to its RUcore identification record, i.e. rucore00000002350. 
 
-Examine the site's layout and read its introduction  
-+ What makes you believe this site is a trustworthy provider of historical texts?
-+ What makes you believe this site is NOT a trustworthy provider of historical texts? 
- 
-### Finding a Source ###
+Download following files:
+-  images/
+-  rulwsb_style.xsl
+-  rulwsb.sch
+-  (your correspondence id number).xml
 
-Visit the site's collections via the 'Browse' function
+Download (right-click and select download) these files. 
 
-Locate the pamphlet *Negro Slavery* by Zachary Macaulay and open it
+Once downloaded, drag and drop (or extract) the files from the zip folder onto your desktop. Open the .xml (correspondence id number) file. It should open with Notepad (PC) or TextEdit (Mac). 
 
-This is an abolitionist pamphlet regarding the Atlantic slave trade, presenting and examine evidence of how it is run.  When you approach a primary source like this, it is tempting to read through it from beginning to end, to get an overview of its contents, and then 'mine' or 'cherry-pick' good quotations to include in your assessments.  However, we are going to focus on examine a very small part of the text in a very high level of detail.  Each of you will be working on one page of text, becoming the 'class expert' on it and its contents.
+Place your correspondence id number document on one side of your screen.
 
-### Setting Up Your Workspace ###
-
-Without closing the browser containing the pamphlet, open a new browser window (not a new tab) and open our shared Google Drive.
- 
-In this folder, you will find a folder entitled 'MacAulay Pamphlet'
-
-Inside the folder you will find a long list of documents, each labelled by a number. These are *mostly* blank documents, one for each page of the pamphlet.
-  
-Your tutor will now assign you a page number. If you are undertaking this project outside of seminar (owing to illness) ask your tutor for a page number via email.
-
-Tick the box next to the two following files:
-* 000style.xsl
-* (your page number).xml
-
-Download (right-click and select download) both files. If asked for the format you would like, choose "As Is".
-
-Once downloaded, drag and drop (or extract) the two files from the zip folder onto your desktop. Open the .xml (page number) file. It should open with Notepad. If not, open Notepad and then drag the .xml icon into Notepad to open it there.
-
-Dock your page number document to one side of your screen.
-
-**Note:** You can do this by dragging the browser to the edge of your screen until it *snaps* into place, or by pressing Cntl+Windows Key+Right Arrow Key.
-
-In your other browser window, go to your page of the pamphlet (**using the original page numbers in the pamphlet, not the number web interface**) and dock this window to the other side of you screen.  You may need to zoom in or out to get your page to a size that you can read comfortably.
+Next, go to the images folder and open a page of correspondence that has been assigned to you (you will decide these assignments in your groups) and place this window to the other side of you screen. You may need to zoom in or out to get your page to a size that you can read comfortably.
 
 If you look at your *blank* document you'll see a little bit of computer code (XML) at the top and bottom of your page.  **This is important, so please do not delete it.**  
 
 The last lines will be 
 <code>&lt;/body&gt;&lt;/text&gt;&lt;/TEI&gt;&lt;/teiCorpus&gt;</code>. Everything you write today should be just above <code>&lt;/body&gt;</code>.
 
-### Transcribing Your Page ###
+## Transcribing Your Pages
 
 The first thing you will need is go to the tag 
 
