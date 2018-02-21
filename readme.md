@@ -71,8 +71,8 @@ Now that you have noted these, you are going to put proper code around them.
 
 **To find information on the people mentioned in your letters, try these sources:**
 
-**1. Silvers's supplementary material on the alumnus in RUcore, <https://rucore.libraries.rutgers.edu/>.**
-**2. HathiTrust full text search, <https://www.libraries.rutgers.edu/indexes/hathitrust>.**
+1. Silvers's supplementary material on the alumnus in RUcore, <https://rucore.libraries.rutgers.edu/>.
+2. HathiTrust full text search, <https://www.libraries.rutgers.edu/indexes/hathitrust>.
 
 *NB: If there is a `&` in your link, you will need to replace this with `&amp;amp;`*
 
@@ -87,7 +87,7 @@ Now that you have noted these, you are going to put proper code around them.
 
 **To obtain this, go to the Wikipedia page for the city and click on the latitude/longitude coordinates for the location. For large areas, such as entire countries or continents, just use the Wikipedia page URL.**
 
-**Alternately, for very specific locations that don't have Wikipedia entries, you can try using Google Maps to look up the latitude and longitude coordinates. Whenever you look up a location in Google Maps, the latitude and longitude appear, in that order, in the URL.** 
+**Alternately, for very specific locations that don't have Wikipedia entries, you can try using Google Maps to look up the latitude and longitude coordinates. Whenever you look up a location in Google Maps, the latitude and longitude appear, in that order, in the URL after the `@` sign.** 
 
 ![Google Maps latitude and longitude coordinates in URL][1]
 
@@ -107,7 +107,7 @@ made by the author) with these
 
 **Where to find these external sources for claims and arguments? If it is a definition or gloss that you seek, try the [Oxford English Dictionary](https://login.proxy.libraries.rutgers.edu/login?url=http://www.oed.com/). If it is further detail on an event the sender alludes to in the text of the letter, search for Silvers's supplementary material on that alumnus in [RUcore](https://rucore.libraries.rutgers.edu/). You may also try a Google search, although be aware that the information you find will vary in terms of its reliability.**
 
-**How should you cite these sources? Follow the conventions for citing web resources as a footnote/endnote in Chicago Style. Guideliens at <https://owl.english.purdue.edu/owl/resource/717/05/>.**
+**How should you cite these sources? Follow the conventions for citing web resources as a footnote/endnote in Chicago Style. Guidelines at <https://owl.english.purdue.edu/owl/resource/717/05/>.**
 
 When you are happy with your work, hit cntl+s (PC) or command+s (Mac) to save your work.
 
@@ -115,7 +115,7 @@ When you are happy with your work, hit cntl+s (PC) or command+s (Mac) to save yo
 
 Once you have saved your file, close the document. Open either Internet Explorer or Firefox. The following will not work in Chrome because it does not have an XML parser.
 
-Making sure both your `singletemplate.xml` file and your `rulwsb_style.xsl` file are in the same folder (or both on your desktop), drag the icon for `singletemplate.xml` into your Internet Explorer or Firefox browser window.
+Making sure both your `singletemplate.xml` file and your `singlestyle.xsl` file are in the same folder (or both on your desktop), drag the icon for `singletemplate.xml` into your Internet Explorer or Firefox browser window.
 
 If you now see a color-coded version of your text, congratulations! If you hover over the colored sections, you should see a pop-up with the additional information you entered.
 
