@@ -1,4 +1,4 @@
-This workshop has been adapted from M. H. Beals's "TEI Close Reading" available at <https://github.com/mhbeals/TEI-Close-Reading>. 
+This lab has been adapted from M. H. Beals's "TEI Close Reading," available at <https://github.com/mhbeals/TEI-Close-Reading>, and is licensed [CC BY](https://creativecommons.org/licenses/by/4.0/).
 
 # Unit: Text Encoding
 
@@ -6,7 +6,7 @@ This workshop will explore a subset of the [Personal Correspondence, 1917-1919](
 
 ## Setting Up Your Workspace
 
-You will be assigned a folder of correspondence organized by Rutgers alumnus. Each folder has a filename that corresponds to its [RUcore](https://rucore.libraries.rutgers.edu/) identification number, i.e. rucore00000002350. 
+You will be assigned a file of correspondence organized by Rutgers alumnus. Each folder has a filename that corresponds to its [RUcore](https://rucore.libraries.rutgers.edu/) identification number, i.e. rucore00000002350. 
 
 Download the following files:
 -  images/

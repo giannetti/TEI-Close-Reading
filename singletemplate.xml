@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="singlestyle.xsl"?>
+
+<TEI>
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title><!-- insert title for your letter, e.g. [sender's name] to [recipient's name] --></title>
+			</titleStmt>
+			<extent><!-- insert length of letter in pages, e.g. 2 p. --></extent>
+			<publicationStmt>
+				<publisher>Rutgers University Libraries</publisher>
+				<distributor> Rutgers Community Repository (RUcore) URL:
+					https://rucore.libraries.rutgers.edu </distributor>
+				<availability>
+					<p>No Known Copyright</p>
+				</availability>
+			</publicationStmt>
+			<sourceDesc>
+				<msDesc>
+					<msIdentifier>
+						<repository>Special Collections and University Archives, Rutgers
+							University Libraries</repository>
+						<collection>Rutgers College. War Service Bureau. Records, 1917-1919</collection>
+						<idno>RG 33/C0/01</idno>
+					</msIdentifier>
+				</msDesc>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<div type="letter">
+				<!-- in the @n attribute of pb, indicate the page number, e.g. pb n="1" -->
+				<pb n="" />
+				<opener>
+					<!-- enter information on the opener of your letter, including dates and names -->
+					<!-- see http://www.wwp.northeastern.edu/research/publications/guide/html/text_openerCloser.html for examples -->
+					<dateline>
+						<date><!-- date as given on letter --></date>
+					</dateline>
+					<salute><!-- opening salutation, e.g. Dear Silvers --></salute>
+				</opener>
+				
+				<p>
+					Sample text.
+					<persName>Name</persName>, <placeName>Place</placeName>, <interp>Claim</interp>.
+				</p>
+				
+				<closer>
+					<salute><!-- closing salutation, e.g. Very truly yours, --></salute><lb/>
+					<signed><!-- name of sender as given on letter --></signed>
+				</closer>
+				
+			</div>
+		</body>
+	</text>
+</TEI>

@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="rulwsb_style.xsl"?>
+<?xml-model href="rulwsb.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<!-- including the TEI ns causes the Firefox XSLT processor to fail -->
+<!-- insert xmlns="http://www.tei-c.org/ns/1.0" xml:id="rucore00000002350" into opening teiCorpus tag for Oxygen XML Editor -->
+<teiCorpus>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Voorhees, John Brownlee</title>
+                <respStmt>
+                    <resp>Transcription and encoding by</resp>
+                    <name xml:id="FG"> Francesca Giannetti </name>
+                    <name><!-- insert names and @xml:id values of other encoders here --></name>
+                </respStmt>
+            </titleStmt>
+            <extent>18 p.</extent>
+            <publicationStmt>
+                <publisher>Rutgers University Libraries</publisher>
+                <distributor> Rutgers Community Repository (RUcore) URL:
+                    https://rucore.libraries.rutgers.edu </distributor>
+                <availability>
+                    <p>No Known Copyright</p>
+                </availability>
+                <authority>Transcribed from digital files available in RUcore</authority>
+                <idno type="URI">https://doi.org/doi:10.7282/T38918PB</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>Special Collections and University Archives, Rutgers University
+                            Libraries</repository>
+                        <collection>Rutgers College. War Service Bureau. Records,
+                            1917-1919</collection>
+                        <idno>RG 33/C0/01</idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <TEI xml:id="rucore00000002350_01">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title>John Brownlee Voorhees to Ralph [W. Voorhees?]</title>
+                </titleStmt>
+                <extent>1 p.</extent>
+                <publicationStmt>
+                    <publisher>Rutgers University Libraries</publisher>
+                    <distributor> Rutgers Community Repository (RUcore) URL:
+                        https://rucore.libraries.rutgers.edu </distributor>
+                    <availability>
+                        <p>No Known Copyright</p>
+                    </availability>
+                </publicationStmt>
+                <sourceDesc>
+                    <msDesc>
+                        <msIdentifier>
+                            <repository>Special Collections and University Archives, Rutgers
+                                University Libraries</repository>
+                            <collection>Rutgers College. War Service Bureau. Records, 1917-1919</collection>
+                            <idno>RG 33/C0/01</idno>
+                        </msIdentifier>
+                    </msDesc>
+                </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        <text>
+            <body>
+                <div type="letter">
+                    <pb n="1" />
+                    <opener>
+                        <note type="letterhead">ASYLUM HILL CONGREGATIONAL CHURCH<lb/> HARTFORD,
+                            CONN.<lb/> JOHN BROWNLEE VOORHEES, MINISTER<lb/>
+                            <placeName key="854 Asylum Ave., Hartford, CT"
+                                ref="https://tools.wmflabs.org/geohack/geohack.php?params=41_46_12_N_72_41_43_W"
+                                >854 ASYLUM AVE.</placeName></note>
+                        <dateline>
+                            <date when="1918-04-20">April 20, 1918.</date></dateline>
+                        <salute>My dear <persName key="Voorhees, Ralph S. Jr. [?]" cert="low"
+                                from-iso="189-" to-iso="19--"
+                                ref="https://doi.org/doi:10.7282/T3RB77D9"
+                            >Ralph</persName>:</salute>
+                    </opener>
+
+                    <p> I am very sorry that I could not attend the meeting of the Alumni Council on
+                            <date>April 13th</date>. These happen to be very busy days with me, as I
+                        plan to start shortly for overseas service in connection with the <name
+                            type="org">Y.M.C.A.</name>, my Church having granted me eight months
+                        leave of absence. </p>
+
+                    <closer>
+                        <salute>Very truly yours,</salute><lb/>
+                        <handShift medium="black-ink"/>
+                        <signed><persName key="Voorhees, John Brownlee" from="1875" to="1919"
+                                role="Minister" ref="https://www.findagrave.com/memorial/130098973"
+                                >John Brownlee Voorhees</persName></signed>
+                    </closer>
+
+                </div>
+            </body>
+        </text>
+    </TEI>
+    <TEI xml:id="rucore00000002350_02">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title>Earl Reed Silvers to John Brownlee Voorhees</title>
+                </titleStmt>
+                <publicationStmt>
+                    <publisher>Rutgers University Libraries</publisher>
+                    <distributor> Rutgers Community Repository (RUcore) URL:
+                        https://rucore.libraries.rutgers.edu </distributor>
+                    <availability>
+                        <p>No Known Copyright</p>
+                    </availability>
+                </publicationStmt>
+                <sourceDesc>
+                    <msDesc>
+                        <msIdentifier>
+                            <repository>Special Collections and University Archives, Rutgers
+                                University Libraries</repository>
+                            <collection>Rutgers College. War Service Bureau. Records,
+                                1917-1919</collection>
+                            <idno>RG 33/C0/01</idno>
+                        </msIdentifier>
+                    </msDesc>
+                </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        <text>
+            <body>
+                <div type="letter">
+                    <pb n="2" />
+                    <opener>
+                        <dateline>
+                            <date when="1918-04-25">April 25, 1918.</date><lb/>
+                        </dateline>
+                        <persName key="Voorhees, John Brownlee" from="1875" to="1919"
+                            role="Minister" ref="https://www.findagrave.com/memorial/130098973">Dr.
+                            J. B. Voorhees,</persName>
+                        <lb/>
+                        <name type="org">Asylum Hill Congregational Church,</name><lb/>
+                        <placeName key="854 Asylum Ave., Hartford, CT"
+                            ref="https://tools.wmflabs.org/geohack/geohack.php?params=41_46_12_N_72_41_43_W"
+                            > 854 Asylum Ave.<lb/> Hartford, Conn.</placeName>
+                        <salute>Dear <persName key="Voorhees, John Brownlee" from="1875" to="1919"
+                                role="Minister" ref="https://www.findagrave.com/memorial/130098973"
+                                >Dr. Voorhees</persName>: </salute>
+                    </opener>
+                    <p> I understand that you will leavershortly for overseas service with the
+                        Y.M.C.A. If you will send me your address, I shall be pleased to include you
+                        in the list of those who receive the benefits of our War Service Bureau. </p>
+                    <closer>
+                        <salute> Wishing you success in this most interesting field of work, I
+                            am<lb/> Sincerely yours, </salute><lb/>
+                        <signed>
+                            <persName key="Silvers, Earl Reed" from="1891" to="1948"
+                                role="Director, War Service Bureau"
+                                ref="http://worldcat.org/identities/lccn-no95043169/">Director.
+                                <lb/>ERS/H</persName>
+                        </signed>
+                    </closer>
+                </div>
+            </body>
+        </text>
+    </TEI>
+    <TEI xml:id="rucore00000002350_03">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title>John Brownlee Voorhees to Earl Reed Silvers</title>
+                </titleStmt>
+                <publicationStmt>
+                    <publisher>Rutgers University Libraries</publisher>
+                    <distributor> Rutgers Community Repository (RUcore) URL:
+                        https://rucore.libraries.rutgers.edu </distributor>
+                    <availability>
+                        <p>No Known Copyright</p>
+                    </availability>
+                </publicationStmt>
+                <sourceDesc>
+                    <msDesc>
+                        <msIdentifier>
+                            <repository>Special Collections and University Archives, Rutgers
+                                University Libraries</repository>
+                            <collection>Rutgers College. War Service Bureau. Records,
+                                1917-1919</collection>
+                            <idno>RG 33/C0/01</idno>
+                        </msIdentifier>
+                    </msDesc>
+                </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        <text>
+            <body>
+                <div type="letter">
+                    <pb n="3" />
+                    <opener>
+                        <note type="letterhead">ASYLUM HILL CONGREGATIONAL CHURCH<lb/> HARTFORD,
+                            CONN.<lb/> JOHN BROWNLEE VOORHEES, MINISTER<lb/>
+                            <placeName key="854 Asylum Ave., Hartford, CT"
+                                ref="https://tools.wmflabs.org/geohack/geohack.php?params=41_46_12_N_72_41_43_W"
+                                >854 ASYLUM AVE.</placeName></note>
+                        <dateline>
+                            <date when="1918-05-02">May 2, 1918.</date>
+                        </dateline>
+                        <persName key="Silvers, Earl Reed" from="1891" to="1948"
+                            role="Director, War Service Bureau"
+                            ref="http://worldcat.org/identities/lccn-no95043169/">Mr. Earl Reed
+                            Silvers,</persName><lb/>
+                        <placeName key="Rutgers College, New Brunswick, NJ"
+                            ref="https://tools.wmflabs.org/geohack/geohack.php?params=40_29_55_N_74_26_54_W"
+                            >New Brunswick, N. J.</placeName>
+                        <salute>My dear <persName key="Silvers, Earl Reed" from="1891" to="1948"
+                            role="Director, War Service Bureau"
+                                ref="http://worldcat.org/identities/lccn-no95043169/">Mr.
+                                Silvers</persName>:</salute>
+                    </opener>
+                    <p>I leave this week for eight months Y.M.C.A. service overseas. My address will
+                        be American Y.M.C.A., <placeName key="12 rue d'Aguesseau, Paris, France"
+                            ref="https://tools.wmflabs.org/geohack/geohack.php?params=48_52_13_N_2_19_10_E"
+                            >12 Rue d'Aggesseau, Paris, France</placeName>. I shall certainly
+                        appreciate being included in the benefits of the Rutgers War Service Bureau.
+                        News from college will look good across the seas.</p>
+                    <closer>
+                        <salute>Cordially ever,</salute><lb/>
+                        <signed><persName key="Voorhees, John Brownlee" from="1875" to="1919"
+                                role="Minister" ref="https://www.findagrave.com/memorial/130098973"
+                                >John Brownlee Voorhees</persName></signed>
+                    </closer>
+                </div>
+            </body>
+        </text>
+    </TEI>
+    <TEI xml:id="rucore00000002350_04">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title>John Brownlee Voorhees to Earl Reed Silvers</title>
+                </titleStmt>
+                <publicationStmt>
+                    <publisher>Rutgers University Libraries</publisher>
+                    <distributor> Rutgers Community Repository (RUcore) URL:
+                        https://rucore.libraries.rutgers.edu </distributor>
+                    <availability>
+                        <p>No Known Copyright</p>
+                    </availability>
+                </publicationStmt>
+                <sourceDesc>
+                    <msDesc>
+                        <msIdentifier>
+                            <repository>Special Collections and University Archives, Rutgers
+                                University Libraries</repository>
+                            <collection>Rutgers College. War Service Bureau. Records,
+                                1917-1919</collection>
+                            <idno>RG 33/C0/01</idno>
+                        </msIdentifier>
+                    </msDesc>
+                </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        <text>
+            <body>
+                <div type="letter">
+                    <pb n="4" />
+                    <head>
+                        <stamp>GIFT OF THE<lb/> AMERICAN PEOPLE<lb/> THROUGH THE<lb/> AMERICAN RED
+                            CROSS<lb/> TO THOSE IN SERVICE</stamp>
+                    </head>
+                    <opener>
+                        <address>
+                            <placeName key="U.S.A. Base Hospital No. 20, Châtel-Guyon, France" ref="https://tools.wmflabs.org/geohack/geohack.php?params=45.9233_N_3.065_E">U.S.A. Base Hospital No. 20<lb/> Central France.</placeName>
+                        </address>
+                        <dateline><date when="1918-09-18">Sept 18, 1918</date></dateline>
+                        <salute>My Dear <persName key="Silvers, Earl Reed" from="1891" to="1948"
+                            role="Director, War Service Bureau"
+                                ref="http://worldcat.org/identities/lccn-no95043169/"
+                                >Silvers</persName>:</salute>
+                    </opener>
+                    <p>This is just to thank you for the War Service letters. I came over last May to
+                        work under the Y.M.C.A.; but the <interp type="gloss"
+                            n="Boche, n. and adj. OED Online. June 2017. Oxford University Press."
+                            source="http://www.oed.com.proxy.libraries.rutgers.edu/view/Entry/20870"
+                            >Boche</interp> considered my activites too dangerous, and decided to
+                        shoot up <placeName key="Toul, France"
+                            ref="https://tools.wmflabs.org/geohack/geohack.php?params=48.675_N_5.8917_E"
+                            >the town</placeName> where my hut was located. They demolished the hut
+                        and incidentally sent a chunk of high explosive through my right leg. The
+                        result has been that I have spent the summer of 1918 on the flat of my back
+                        with the aforesaid leg hung up in a complicated apparatus which has kept my
+                        right toe pointing at the North star for three months.</p>
+                    <p><interp type=" 'cheerful, confident spirit' "
+                            n="Silvers, Earl Reed. Obituaries and Memorials, p. 54."
+                            source="https://doi.org/doi:10.7282/T34M97D7">But it is not as bad as it
+                            sounds, and on the whole it has not been a bad summer. Uncle Sam's Army
+                            Hospitals are great institutions, and the best that medical science and
+                            surgical skill can offer is yours to command.</interp> Also it is cheap.
+                        I have saved at least $10000. in surgeon's fees by coming over to <pb n="5" /> to France to be shot up. So you
+                        see I am considerably ahead of the game.</p>
+                    <p>Some day soon or late <interp type=" 'arrived in New York Christmas eve' " n="Association Men. v. 44. International Committee of the Associations, 1918, p. 456." source="https://books.google.com/books?id=XWQzAQAAMAAJ">I expect to get back to the States</interp>, and with a right
+                        leg adequate at last to the ancient and honerable game of golf. I am afraid,
+                        however, I have lost my drive.</p>
+                    <p>It begins to look as if America had sent a real army overseas. Well, it has
+                        been on of the big privileges of my life to have some association with it,
+                        short as it was. It has been worth coming over, despite my contact with a
+                        ten inch shell.</p>
+                    <p>Keep on with the letters. I shall be in the hospital some time yet.</p>
+                    <closer>
+                        <salute>Yours ever</salute><lb/>
+                        <signed><persName key="Voorhees, John Brownlee" from="1875" to="1919"
+                                role="Minister" ref="https://www.findagrave.com/memorial/130098973"
+                                >John Brownlee Voorhees</persName> '96</signed>
+                    </closer>
+                    <postscript>
+                        <p>LSS <unclear>files</unclear><lb/>1<hi rend="superscript">st</hi> Lt
+                                314<hi rend="superscript">th</hi> Engrs.</p>
+                    </postscript>
+                </div>
+            </body>
+        </text>
+    </TEI>
+    <TEI xml:id="rucore00000002350_05">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title>Earl Reed Silvers to John Brownlee Voorhees</title>
+                </titleStmt>
+                <publicationStmt>
+                    <publisher>Rutgers University Libraries</publisher>
+                    <distributor> Rutgers Community Repository (RUcore) URL:
+                        https://rucore.libraries.rutgers.edu </distributor>
+                    <availability>
+                        <p>No Known Copyright</p>
+                    </availability>
+                </publicationStmt>
+                <sourceDesc>
+                    <msDesc>
+                        <msIdentifier>
+                            <repository>Special Collections and University Archives, Rutgers
+                                University Libraries</repository>
+                            <collection>Rutgers College. War Service Bureau. Records,
+                                1917-1919</collection>
+                            <idno>RG 33/C0/01</idno>
+                        </msIdentifier>
+                    </msDesc>
+                </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        <text>
+            <body>
+                <div type="letter">
+                    <pb n="6" />
+                    <opener>
+                        <dateline><date when="1918-10-24">October 24, <lb/> 1 9 18</date></dateline>
+                        <persName key="Voorhees, John Brownlee" from="1875" to="1919"
+                            role="Minister" ref="https://www.findagrave.com/memorial/130098973">Dr.
+                            John B. Voorhees</persName>, <lb/>
+                        <placeName key="U.S.A. Base Hospital No. 20, Châtel-Guyon, France"
+                            ref="https://tools.wmflabs.org/geohack/geohack.php?params=45.9233_N_3.065_E"
+                            >Base Hospital #20 <lb/> American E.F.</placeName>
+                        <salute>Dear <persName key="Voorhees, John Brownlee" from="1875" to="1919"
+                                role="Minister" ref="https://www.findagrave.com/memorial/130098973"
+                                >Dr. Voorhees</persName>:</salute>
+                    </opener>
+                    <p>Your letter of September 18 was very welcome. Here at the college we have
+                        been worrying about you and our only word has come indirectly. We are glad
+                        to know that your injured limb is in the process of healing and we trust
+                        that you will not have to spend very much more time in the hospital.</p>
+                    <p>There must be a lot of satisfaction to you in the thought that you have
+                        served so bravely and courageously in the big cause in which you are
+                        enlisted.</p>
+                    <closer>
+                        <salute>Very sincerely yours,</salute>
+                        <signed><persName key="Silvers, Earl Reed" from="1891" to="1948"
+                            role="Director, War Service Bureau"
+                                ref="http://worldcat.org/identities/lccn-no95043169/"
+                                >ERS/G</persName></signed>
+                    </closer>
+                </div>
+            </body>
+        </text>
+    </TEI>
+    <TEI xml:id="rucore00000002350_06">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title>Earl Reed Silvers to Juliana Deyo Voorhees</title>
+                </titleStmt>
+                <publicationStmt>
+                    <publisher>Rutgers University Libraries</publisher>
+                    <distributor> Rutgers Community Repository (RUcore) URL:
+                        https://rucore.libraries.rutgers.edu </distributor>
+                    <availability>
+                        <p>No Known Copyright</p>
+                    </availability>
+                </publicationStmt>
+                <sourceDesc>
+                    <msDesc>
+                        <msIdentifier>
+                            <repository>Special Collections and University Archives, Rutgers
+                                University Libraries</repository>
+                            <collection>Rutgers College. War Service Bureau. Records,
+                                1917-1919</collection>
+                            <idno>RG 33/C0/01</idno>
+                        </msIdentifier>
+                    </msDesc>
+                </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        <text>
+            <body>
+                <div type="letter">
+                    <pb n="8" />
+                    <opener>
+                        <dateline><date when="1919-01-13">January 13, 1919</date></dateline>
+                        <persName>Mrs. J. Brownlee Voorhees</persName>,<lb/>
+                        <placeName key="854 Asylum Ave., Hartford, CT"
+                            ref="https://tools.wmflabs.org/geohack/geohack.php?params=41_46_12_N_72_41_43_W"
+                            >854 Asylum Ave. <lb/> Hartford, Conn.</placeName>
+                        <salute>My dear <persName key="Voorhees, Juliana Deyo" from="1880" to="1956"
+                                role="spouse" ref="https://www.findagrave.com/memorial/130099011"
+                                >Mrs. Voorhees</persName>:</salute>
+                    </opener>
+                    <p> It is with very great regret that we have heard of the death of your
+                        husband, <persName key="Voorhees, John Brownlee" from="1875" to="1919"
+                            role="Minister" ref="https://www.findagrave.com/memorial/130098973">Dr.
+                            J. Brownlee Voorhees</persName>. May I express to you my deepest
+                        sympathy, both personally, and as Director of the War Service Bureau. Dr.
+                        Voorhees has sent us several letters from France and his continued optimism
+                        in the face of many difficulties has been a source of much inspiration for
+                        us. His loss is a big one and his place will be hard to fill, I know. </p>
+                    <closer>
+                        <salute>Very sincerely yours,</salute>
+                    </closer>
+                </div>
+            </body>
+        </text>
+    </TEI>
+    <TEI xml:id="rucore00000002350_07">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title>Earl Reed Silvers to Irving H. Berg</title>
+                </titleStmt>
+                <publicationStmt>
+                    <publisher>Rutgers University Libraries</publisher>
+                    <distributor> Rutgers Community Repository (RUcore) URL:
+                        https://rucore.libraries.rutgers.edu </distributor>
+                    <availability>
+                        <p>No Known Copyright</p>
+                    </availability>
+                </publicationStmt>
+                <sourceDesc>
+                    <msDesc>
+                        <msIdentifier>
+                            <repository>Special Collections and University Archives, Rutgers
+                                University Libraries</repository>
+                            <collection>Rutgers College. War Service Bureau. Records,
+                                1917-1919</collection>
+                            <idno>RG 33/C0/01</idno>
+                        </msIdentifier>
+                    </msDesc>
+                </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        <text>
+            <body>
+                <div type="letter">
+                    <pb n="9" />
+                    <opener>
+                        <dateline>
+                            <date when="1919-02-03">February 3, 1919</date>
+                        </dateline>
+                        <persName key="Berg, Irving Husted" role="Minister" from="1878" to="1941"
+                            ref="http://www.jstor.org/stable/23135271">Rev. Irving H.
+                            Berg</persName>,<lb/>
+                        <placeName key="2611 Sedgwick Ave, New York, NY"
+                            ref="https://tools.wmflabs.org/geohack/geohack.php?params=40_52_8_N_73_54_19_W"
+                            >2611 Sedgewick Avenue,<lb/> New York, N.Y.</placeName>
+                        <salute>Dear Mr. Berg;-</salute>
+                    </opener>
+                    <p>We are very anxious to secure for the Rutgers Alumni Quarterly and for our
+                        college records, a photograph of the <persName key="Voorhees, John Brownlee"
+                            from="1875" to="1919" role="Minister"
+                            ref="https://www.findagrave.com/memorial/130098973">Rev. J. Brownlee
+                            Voorhees</persName>. <persName key="Demarest, William Henry Steele"
+                            role="President, Rutgers College" from="1863" to="1956"
+                            ref="https://www.rutgers.edu/about/history/past-presidents/william-henry-steele-demarest"
+                            >Dr. Demarest</persName> has suggested that possibly you may have one on
+                        hand. If you have, I shall be very grateful if you will permit us to use for
+                        the making of a zinc cut. It will only take a few days, and the picture will
+                        not be harmed.</p>
+                    <p>I hesitate to write <persName key="Voorhees, Juliana Deyo" from="1880"
+                            to="1956" role="spouse"
+                            ref="https://www.findagrave.com/memorial/130099011">Mrs.
+                            Voorhees</persName> at this time. Will you please advise us, if you have
+                        not a picture!</p>
+                    <closer>
+                        <salute>Thanking you,<lb/> I am<lb/> Very sincerely yours,</salute>
+                    </closer>
+                </div>
+            </body>
+        </text>
+    </TEI>
+    <TEI xml:id="rucore00000002350_08">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title>Irving H. Berg to Earl Reed Silvers</title>
+                </titleStmt>
+                <publicationStmt>
+                    <publisher>Rutgers University Libraries</publisher>
+                    <distributor> Rutgers Community Repository (RUcore) URL:
+                        https://rucore.libraries.rutgers.edu </distributor>
+                    <availability>
+                        <p>No Known Copyright</p>
+                    </availability>
+                </publicationStmt>
+                <sourceDesc>
+                    <msDesc>
+                        <msIdentifier>
+                            <repository>Special Collections and University Archives, Rutgers
+                                University Libraries</repository>
+                            <collection>Rutgers College. War Service Bureau. Records,
+                                1917-1919</collection>
+                            <idno>RG 33/C0/01</idno>
+                        </msIdentifier>
+                    </msDesc>
+                </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        <text>
+            <body>
+                <div type="letter">
+                    <pb n="10" />
+                    <opener>
+                        <note type="letterhead">FORT WASHINGTON COLLEGIATE CHURCH <lb/>IRVING HUSTED
+                            BERG, MINISTER <lb/><placeName
+                                key="729 West 181st Street, New York, NY 10033"
+                                ref="https://tools.wmflabs.org/geohack/geohack.php?params=40_51_3_N_73_56_23_W"
+                                >729 WEST 181ST STREET<lb/> NEW YORK</placeName><lb/> TELEPHONE
+                            <lb/>ST. NICHOLAS 2942</note>
+                        <dateline>
+                            <address>
+                                <placeName key="2611 Sedgwick Ave, New York, NY" ref="https://tools.wmflabs.org/geohack/geohack.php?params=40_52_8_N_73_54_19_W">2611 Sedgwick Ave.,</placeName></address>
+                            <date when="1919-02-04">Feb. 4, 1919</date>
+                        </dateline>
+                        <persName key="Silvers, Earl Reed" from="1891" to="1948"
+                            role="Director, War Service Bureau"
+                            ref="http://worldcat.org/identities/lccn-no95043169/">Mr. Earl Reed
+                            Silvers,</persName><lb/>
+                        <name type="org">War Service Bureau,</name><lb/>
+                        <placeName key="Rutgers College, New Brunswick, NJ"
+                            ref="https://tools.wmflabs.org/geohack/geohack.php?params=40_29_55_N_74_26_54_W"
+                            >Rutgers College, New Brunswick, N.J.</placeName>
+                        <salute>Dear <persName key="Silvers, Earl Reed" from="1891" to="1948"
+                            role="Director, War Service Bureau"
+                                ref="http://worldcat.org/identities/lccn-no95043169/">Mr.
+                                Silvers</persName>:-</salute>
+                    </opener>
+                    <p>I have sent your letter to <persName key="Voorhees, Juliana Deyo" from="1880"
+                            to="1956" role="spouse"
+                            ref="https://www.findagrave.com/memorial/130099011">Mrs.
+                            Voorhees</persName>, &amp; you will probably hear from her directly.</p>
+                    <p>The only picture of <persName key="Voorhees, John Brownlee" from="1875"
+                            to="1919" role="Minister"
+                            ref="https://www.findagrave.com/memorial/130098973">Dr.
+                            Voorhees</persName> in my possession is also a picture of his first
+                        baby! This would hardly suit your purpose. Let me know if you are
+                        unsuccessful in hearing from Mrs. Voorhees.</p>
+                    <closer>
+                        <salute>I am <lb/> Yours very truly,</salute><lb/>
+                        <signed><persName key="Berg, Irving Husted" role="Minister" from="1878"
+                                to="1941" ref="http://www.jstor.org/stable/23135271">Irving H.
+                                Berg</persName></signed>
+                    </closer>
+                </div>
+            </body>
+        </text>
+    </TEI>
+</teiCorpus>

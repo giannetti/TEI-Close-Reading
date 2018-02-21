@@ -3,27 +3,32 @@
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" xmlns="http://www.w3.org/1999/xhtml"
     version="2.0">
     <!-- The Firefox XSLT processor only accepts method html. -->
-    <xsl:output method="xhtml" encoding="UTF-8" indent="yes"/>
+    <xsl:output method="html" encoding="UTF-8" indent="yes"/>
 
     <xsl:template match="/">
         <html>
             <body>
-                <center>
+                <div style="text-align: center;">
                     <h2>
                         <xsl:value-of select="/teiCorpus/teiHeader/fileDesc/titleStmt/title"/>
                     </h2>
                     <h4>
                         <xsl:value-of
-                            select="/teiCorpus/teiHeader/fileDesc/publicationStmt/authority"/><br/>
+                            select="/teiCorpus/teiHeader/fileDesc/publicationStmt/authority"/>
+                        <br/>
                         <xsl:text>URL: </xsl:text>
-                        <xsl:value-of
-                            select="/teiCorpus/teiHeader/fileDesc/publicationStmt/idno[@type='URI']"
-                        />. </h4>
-                </center>
+                        <a href="{/teiCorpus/teiHeader/fileDesc/publicationStmt/idno[@type='URI']}" target="_blank">
+                            <xsl:value-of
+                                select="/teiCorpus/teiHeader/fileDesc/publicationStmt/idno[@type='URI']"
+                            />
+                        </a>
+                    </h4>
+                </div>
                 <hr/>
                 <xsl:for-each select="/teiCorpus/TEI/text/body/div[@type='letter']">
-                    <i><xsl:value-of select="ancestor::TEI/teiHeader/fileDesc/titleStmt/title"
-                        />.</i>
+                    <h3>
+                        <xsl:value-of select="ancestor::TEI/teiHeader/fileDesc/titleStmt/title"/>
+                    </h3>
                     <p id="{ancestor::TEI/@xml:id}">
                         <xsl:apply-templates/>
                     </p>
@@ -89,10 +94,7 @@
     </xsl:template>
     <!-- The Firefox XSLT processor can't interpret percentages in the height attribute, but px okay. -->
     <xsl:template match="pb">
-        <h4>Page: <a name="{@n}"><xsl:value-of select="@n"/></a></h4>
-        <a href="{@facs}">
-            <img src="{@facs}" alt="page image" height="75px"/>
-        </a>
+        <h4>Page: <xsl:value-of select="@n"/></h4>
         <br/>
     </xsl:template>
 </xsl:stylesheet>
