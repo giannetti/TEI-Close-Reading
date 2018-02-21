@@ -3,7 +3,7 @@
 <?xml-model href="rulwsb.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 <!-- including the TEI ns causes the Firefox XSLT processor to fail -->
-<!-- insert xmlns="http://www.tei-c.org/ns/1.0" xml:id="rucore00000002350" into opening teiCorpus tag for Oxygen XML Editor -->
+<!-- insert xmlns="http://www.tei-c.org/ns/1.0" into opening teiCorpus tag for Oxygen XML Editor -->
 <teiCorpus>
     <teiHeader>
         <fileDesc>
