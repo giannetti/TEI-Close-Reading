@@ -4,7 +4,7 @@
 
 <!-- including the TEI ns causes the Firefox XSLT processor to fail -->
 <!-- insert xmlns="http://www.tei-c.org/ns/1.0" into opening teiCorpus tag for Oxygen XML Editor -->
-<teiCorpus>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xml:id="rucore00000002350">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -38,12 +38,15 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <revisionDesc>
+            <change when="2018-06-02" who="#FG">Added information in attributes of persName and interp elements. Added notes inside of interp element.</change>
+        </revisionDesc>
     </teiHeader>
     <TEI xml:id="rucore00000002350_01">
         <teiHeader>
             <fileDesc>
                 <titleStmt>
-                    <title>John Brownlee Voorhees to Ralph [W. Voorhees?]</title>
+                    <title>John Brownlee Voorhees to Ralph [W. Voorhees?], April 20, 1918</title>
                 </titleStmt>
                 <extent>1 p.</extent>
                 <publicationStmt>
@@ -79,7 +82,7 @@
                         <dateline>
                             <date when="1918-04-20">April 20, 1918.</date></dateline>
                         <salute>My dear <persName key="Voorhees, Ralph S. Jr. [?]" cert="low"
-                                from-iso="189-" to-iso="19--"
+                            from-iso="189-" to-iso="19--" role="Private, Base Hospital #8"
                                 ref="https://doi.org/doi:10.7282/T3RB77D9"
                             >Ralph</persName>:</salute>
                     </opener>
@@ -106,7 +109,7 @@
         <teiHeader>
             <fileDesc>
                 <titleStmt>
-                    <title>Earl Reed Silvers to John Brownlee Voorhees</title>
+                    <title>Earl Reed Silvers to John Brownlee Voorhees, April 25, 1918</title>
                 </titleStmt>
                 <publicationStmt>
                     <publisher>Rutgers University Libraries</publisher>
@@ -170,7 +173,7 @@
         <teiHeader>
             <fileDesc>
                 <titleStmt>
-                    <title>John Brownlee Voorhees to Earl Reed Silvers</title>
+                    <title>John Brownlee Voorhees to Earl Reed Silvers, May 2, 1918</title>
                 </titleStmt>
                 <publicationStmt>
                     <publisher>Rutgers University Libraries</publisher>
@@ -238,7 +241,7 @@
         <teiHeader>
             <fileDesc>
                 <titleStmt>
-                    <title>John Brownlee Voorhees to Earl Reed Silvers</title>
+                    <title>John Brownlee Voorhees to Earl Reed Silvers, Sept 18, 1918</title>
                 </titleStmt>
                 <publicationStmt>
                     <publisher>Rutgers University Libraries</publisher>
@@ -283,7 +286,7 @@
                         work under the Y.M.C.A.; but the <interp type="gloss"
                             n="Boche, n. and adj. OED Online. June 2017. Oxford University Press."
                             source="http://www.oed.com.proxy.libraries.rutgers.edu/view/Entry/20870"
-                            >Boche</interp> considered my activites too dangerous, and decided to
+                            >Boche<note resp="#FG">A derogatory term for a German. Usually plural.</note></interp> considered my activites too dangerous, and decided to
                         shoot up <placeName key="Toul, France"
                             ref="https://tools.wmflabs.org/geohack/geohack.php?params=48.675_N_5.8917_E"
                             >the town</placeName> where my hut was located. They demolished the hut
@@ -294,9 +297,9 @@
                     <p><interp type=" 'cheerful, confident spirit' "
                             n="Silvers, Earl Reed. Obituaries and Memorials, p. 54."
                             source="https://doi.org/doi:10.7282/T34M97D7">But it is not as bad as it
-                            sounds, and on the whole it has not been a bad summer. Uncle Sam's Army
+                        sounds</interp>, and on the whole it has not been a bad summer. Uncle Sam's Army
                             Hospitals are great institutions, and the best that medical science and
-                            surgical skill can offer is yours to command.</interp> Also it is cheap.
+                            surgical skill can offer is yours to command. Also it is cheap.
                         I have saved at least $10000. in surgeon's fees by coming over to <pb n="5" /> to France to be shot up. So you
                         see I am considerably ahead of the game.</p>
                     <p>Some day soon or late <interp type=" 'arrived in New York Christmas eve' " n="Association Men. v. 44. International Committee of the Associations, 1918, p. 456." source="https://books.google.com/books?id=XWQzAQAAMAAJ">I expect to get back to the States</interp>, and with a right
@@ -325,7 +328,7 @@
         <teiHeader>
             <fileDesc>
                 <titleStmt>
-                    <title>Earl Reed Silvers to John Brownlee Voorhees</title>
+                    <title>Earl Reed Silvers to John Brownlee Voorhees, October 24, 1918</title>
                 </titleStmt>
                 <publicationStmt>
                     <publisher>Rutgers University Libraries</publisher>
@@ -386,7 +389,7 @@
         <teiHeader>
             <fileDesc>
                 <titleStmt>
-                    <title>Earl Reed Silvers to Juliana Deyo Voorhees</title>
+                    <title>Earl Reed Silvers to Juliana Deyo Voorhees, January 13, 1919</title>
                 </titleStmt>
                 <publicationStmt>
                     <publisher>Rutgers University Libraries</publisher>
@@ -415,12 +418,13 @@
                     <pb n="8" />
                     <opener>
                         <dateline><date when="1919-01-13">January 13, 1919</date></dateline>
-                        <persName>Mrs. J. Brownlee Voorhees</persName>,<lb/>
+                        <persName key="Voorhees, Juliana Deyo" from="1880" to="1956"
+                            role="Spouse" ref="https://www.findagrave.com/memorial/130099011">Mrs. J. Brownlee Voorhees</persName>,<lb/>
                         <placeName key="854 Asylum Ave., Hartford, CT"
                             ref="https://tools.wmflabs.org/geohack/geohack.php?params=41_46_12_N_72_41_43_W"
                             >854 Asylum Ave. <lb/> Hartford, Conn.</placeName>
                         <salute>My dear <persName key="Voorhees, Juliana Deyo" from="1880" to="1956"
-                                role="spouse" ref="https://www.findagrave.com/memorial/130099011"
+                                role="Spouse" ref="https://www.findagrave.com/memorial/130099011"
                                 >Mrs. Voorhees</persName>:</salute>
                     </opener>
                     <p> It is with very great regret that we have heard of the death of your
@@ -442,7 +446,7 @@
         <teiHeader>
             <fileDesc>
                 <titleStmt>
-                    <title>Earl Reed Silvers to Irving H. Berg</title>
+                    <title>Earl Reed Silvers to Irving H. Berg, February 3, 1919</title>
                 </titleStmt>
                 <publicationStmt>
                     <publisher>Rutgers University Libraries</publisher>
@@ -493,7 +497,7 @@
                         the making of a zinc cut. It will only take a few days, and the picture will
                         not be harmed.</p>
                     <p>I hesitate to write <persName key="Voorhees, Juliana Deyo" from="1880"
-                            to="1956" role="spouse"
+                            to="1956" role="Spouse"
                             ref="https://www.findagrave.com/memorial/130099011">Mrs.
                             Voorhees</persName> at this time. Will you please advise us, if you have
                         not a picture!</p>
@@ -508,7 +512,7 @@
         <teiHeader>
             <fileDesc>
                 <titleStmt>
-                    <title>Irving H. Berg to Earl Reed Silvers</title>
+                    <title>Irving H. Berg to Earl Reed Silvers, Feb. 4, 1919</title>
                 </titleStmt>
                 <publicationStmt>
                     <publisher>Rutgers University Libraries</publisher>
@@ -561,7 +565,7 @@
                                 Silvers</persName>:-</salute>
                     </opener>
                     <p>I have sent your letter to <persName key="Voorhees, Juliana Deyo" from="1880"
-                            to="1956" role="spouse"
+                            to="1956" role="Spouse"
                             ref="https://www.findagrave.com/memorial/130099011">Mrs.
                             Voorhees</persName>, &amp; you will probably hear from her directly.</p>
                     <p>The only picture of <persName key="Voorhees, John Brownlee" from="1875"

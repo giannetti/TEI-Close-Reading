@@ -29,12 +29,12 @@
             <assert test="@n">
                 ERROR: Please include an @n attribute with the page number
             </assert>
-            <assert test="@facs">
+<!--            <assert test="@facs">
                 ERROR: Please include the @facs attribute with a relative path to your images file, i.e. "images/rucore00000002350_01.png"
             </assert>
             <assert test="ends-with(@facs, '.png')">
                 All @facs values must point to a locally stored image with the file extension .png
-            </assert>
+            </assert>-->
         </rule>
     </pattern>
     <pattern>
