@@ -10,14 +10,14 @@ You will be assigned a file of correspondence organized by Rutgers alumnus. Each
 
 Go to <https://github.com/giannetti/TEI-Close-Reading> and download the whole repository, including:
 
--  common-mistakes.md
 -  pdfs/
+-  common-mistakes.md
 -  README.md
 -  rulwsb_style.xsl
 -  rulwsb.sch
 -  singlestyle.xsl
 -  singletemplate.xml
--  voorhees_john-b.xml [this is a sample encoding]
+-  rucore00000002350.xml [this is a sample encoding]
 
 Double click (Mac) or right-click (PC) to expand the contents of the zip folder. 
 
