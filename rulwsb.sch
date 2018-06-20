@@ -2,7 +2,15 @@
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
     <title>Schematron constraints for the Rutgers War Service Bureau correspondence</title>
     <ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
-    
+
+    <pattern>
+        <rule context="tei:TEI//@ref | tei:TEI//@who | tei:TEI//@corresp | tei:TEI//@wit">
+            <assert test="starts-with(., '#')">
+                Attributes @ref, @who, @corresp and @wit must begin with a hashtag.
+            </assert>
+        </rule>
+    </pattern>
+
     <pattern>
         <rule context="tei:publicationStmt/child::tei:idno">
             <assert test="@type">
@@ -13,14 +21,14 @@
     <pattern>
         <rule context="tei:TEI">
             <assert test="@xml:id">
-                ERROR: Every TEI element must have an @xml:id attribute formed with the filename and the letter number separated by an underscore, i.e. rucore00000002350_01 is letter #1 in the rucore00000002350 file 
+                ERROR: Every TEI element must have an @xml:id attribute formed with the filename and the letter number separated by an underscore, i.e. rucore00000002350_01 is letter #1 in the rucore00000002350 file
             </assert>
         </rule>
     </pattern>
         <pattern>
             <rule context="tei:div">
                 <assert test="@type">
-                    ERROR: The div element should have a @type attribute, i.e. @type="letter"  
+                    ERROR: The div element should have a @type attribute, i.e. @type="letter"
                 </assert>
             </rule>
         </pattern>
@@ -47,7 +55,7 @@
     <pattern>
         <rule context="tei:note">
             <assert test="@type">
-                ERROR: All note elements must contain a @type attribute, i.e. @type="letterhead"
+                ERROR: All note elements must contain a @type attribute, i.e. @type="letterhead" or @type="footnote"
             </assert>
         </rule>
     </pattern>

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-stylesheet type="text/xsl" href="rulwsb_style.xsl"?>
 <?xml-model href="rulwsb.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
@@ -40,6 +42,7 @@
         </fileDesc>
         <revisionDesc>
             <change when="2018-06-02" who="#FG">Added information in attributes of persName and interp elements. Added notes inside of interp element.</change>
+            <change when="2018-06-20" who="#FG">Added xml:id attributes and values to interp elements and separated notes with target pointing to respective interp element. Same for placeName element. Added schema declarations.</change>
         </revisionDesc>
     </teiHeader>
     <TEI xml:id="rucore00000002350_01">
@@ -74,13 +77,21 @@
                 <div type="letter">
                     <pb n="1" />
                     <opener>
-                        <note type="letterhead">ASYLUM HILL CONGREGATIONAL CHURCH<lb/> HARTFORD,
-                            CONN.<lb/> JOHN BROWNLEE VOORHEES, MINISTER<lb/>
-                            <placeName key="854 Asylum Ave., Hartford, CT"
+                        <note type="letterhead">
+                          <address>
+                            <addrLine>ASYLUM HILL CONGREGATIONAL CHURCH</addrLine>
+                            <addrLine>HARTFORD, CONN.</addrLine>
+                            <addrLine>JOHN BROWNLEE VOORHEES, MINISTER</addrLine>
+                            <addrLine>
+                              <placeName key="854 Asylum Ave., Hartford, CT"
                                 ref="https://tools.wmflabs.org/geohack/geohack.php?params=41_46_12_N_72_41_43_W"
-                                >854 ASYLUM AVE.</placeName></note>
+                                >854 ASYLUM AVE.</placeName>
+                              </addrLine>
+                            </address>
+                          </note>
                         <dateline>
-                            <date when="1918-04-20">April 20, 1918.</date></dateline>
+                          <date when="1918-04-20">April 20, 1918.</date>
+                        </dateline>
                         <salute>My dear <persName key="Voorhees, Ralph S. Jr. [?]" cert="low"
                             from-iso="189-" to-iso="19--" role="Private, Base Hospital #8"
                                 ref="https://doi.org/doi:10.7282/T3RB77D9"
@@ -96,11 +107,12 @@
                     <closer>
                         <salute>Very truly yours,</salute><lb/>
                         <handShift medium="black-ink"/>
-                        <signed><persName key="Voorhees, John Brownlee" from="1875" to="1919"
+                        <signed>
+                          <persName key="Voorhees, John Brownlee" from="1875" to="1919"
                                 role="Minister" ref="https://www.findagrave.com/memorial/130098973"
-                                >John Brownlee Voorhees</persName></signed>
+                                >John Brownlee Voorhees</persName>
+                        </signed>
                     </closer>
-
                 </div>
             </body>
         </text>
@@ -140,14 +152,19 @@
                         <dateline>
                             <date when="1918-04-25">April 25, 1918.</date><lb/>
                         </dateline>
-                        <persName key="Voorhees, John Brownlee" from="1875" to="1919"
-                            role="Minister" ref="https://www.findagrave.com/memorial/130098973">Dr.
-                            J. B. Voorhees,</persName>
-                        <lb/>
-                        <name type="org">Asylum Hill Congregational Church,</name><lb/>
-                        <placeName key="854 Asylum Ave., Hartford, CT"
+                        <address>
+                          <addrLine>
+                            <persName key="Voorhees, John Brownlee" from="1875" to="1919"
+                                role="Minister" ref="https://www.findagrave.com/memorial/130098973">Dr.
+                                J. B. Voorhees,</persName>
+                          </addrLine>
+                          <addrLine>
+                            <name type="org">Asylum Hill Congregational Church,</name>
+                          </addrLine>
+                          <addrLine><placeName key="854 Asylum Ave., Hartford, CT"
                             ref="https://tools.wmflabs.org/geohack/geohack.php?params=41_46_12_N_72_41_43_W"
-                            > 854 Asylum Ave.<lb/> Hartford, Conn.</placeName>
+                            > 854 Asylum Ave.<lb/> Hartford, Conn.</placeName></addrLine>
+                        </address>
                         <salute>Dear <persName key="Voorhees, John Brownlee" from="1875" to="1919"
                                 role="Minister" ref="https://www.findagrave.com/memorial/130098973"
                                 >Dr. Voorhees</persName>: </salute>
@@ -201,21 +218,34 @@
                 <div type="letter">
                     <pb n="3" />
                     <opener>
-                        <note type="letterhead">ASYLUM HILL CONGREGATIONAL CHURCH<lb/> HARTFORD,
-                            CONN.<lb/> JOHN BROWNLEE VOORHEES, MINISTER<lb/>
+                      <note type="letterhead">
+                        <address>
+                          <addrLine>ASYLUM HILL CONGREGATIONAL CHURCH</addrLine>
+                          <addrLine>HARTFORD, CONN.</addrLine>
+                          <addrLine>JOHN BROWNLEE VOORHEES, MINISTER</addrLine>
+                          <addrLine>
                             <placeName key="854 Asylum Ave., Hartford, CT"
-                                ref="https://tools.wmflabs.org/geohack/geohack.php?params=41_46_12_N_72_41_43_W"
-                                >854 ASYLUM AVE.</placeName></note>
+                              ref="https://tools.wmflabs.org/geohack/geohack.php?params=41_46_12_N_72_41_43_W"
+                              >854 ASYLUM AVE.</placeName>
+                            </addrLine>
+                          </address>
+                        </note>
                         <dateline>
                             <date when="1918-05-02">May 2, 1918.</date>
                         </dateline>
-                        <persName key="Silvers, Earl Reed" from="1891" to="1948"
+                        <address>
+                          <addrLine>
+                            <persName key="Silvers, Earl Reed" from="1891" to="1948"
                             role="Director, War Service Bureau"
                             ref="http://worldcat.org/identities/lccn-no95043169/">Mr. Earl Reed
-                            Silvers,</persName><lb/>
-                        <placeName key="Rutgers College, New Brunswick, NJ"
+                            Silvers,</persName>
+                          </addrLine>
+                          <addrLine>
+                            <placeName key="Rutgers College, New Brunswick, NJ"
                             ref="https://tools.wmflabs.org/geohack/geohack.php?params=40_29_55_N_74_26_54_W"
                             >New Brunswick, N. J.</placeName>
+                          </addrLine>
+                        </address>
                         <salute>My dear <persName key="Silvers, Earl Reed" from="1891" to="1948"
                             role="Director, War Service Bureau"
                                 ref="http://worldcat.org/identities/lccn-no95043169/">Mr.
@@ -274,7 +304,10 @@
                     </head>
                     <opener>
                         <address>
-                            <placeName key="U.S.A. Base Hospital No. 20, Châtel-Guyon, France" ref="https://tools.wmflabs.org/geohack/geohack.php?params=45.9233_N_3.065_E">U.S.A. Base Hospital No. 20<lb/> Central France.</placeName>
+                          <addrLine>
+                            <placeName key="U.S.A. Base Hospital No. 20, Châtel-Guyon, France" ref="https://tools.wmflabs.org/geohack/geohack.php?params=45.9233_N_3.065_E">U.S.A. Base Hospital No. 20</placeName>
+                          </addrLine>
+                          <addrLine>Central France.</addrLine>
                         </address>
                         <dateline><date when="1918-09-18">Sept 18, 1918</date></dateline>
                         <salute>My Dear <persName key="Silvers, Earl Reed" from="1891" to="1948"
@@ -283,26 +316,34 @@
                                 >Silvers</persName>:</salute>
                     </opener>
                     <p>This is just to thank you for the War Service letters. I came over last May to
-                        work under the Y.M.C.A.; but the <interp type="gloss"
-                            n="Boche, n. and adj. OED Online. June 2017. Oxford University Press."
-                            source="http://www.oed.com.proxy.libraries.rutgers.edu/view/Entry/20870"
-                            >Boche<note resp="#FG">A derogatory term for a German. Usually plural.</note></interp> considered my activites too dangerous, and decided to
-                        shoot up <placeName key="Toul, France"
-                            ref="https://tools.wmflabs.org/geohack/geohack.php?params=48.675_N_5.8917_E"
-                            >the town</placeName> where my hut was located. They demolished the hut
+                        work under the Y.M.C.A.; but the <interp xml:id="fn1">Boche</interp>
+                        <note type="gloss" target="#fn1">
+                          <ref target="http://www.oed.com.proxy.libraries.rutgers.edu/view/Entry/20870">
+                            Boche, n. and adj. OED Online. June 2017. Oxford University Press.</ref>
+                            <p>A derogatory term for a German. Usually plural.</p>
+                        </note> considered my activites too dangerous, and decided to
+                        shoot up <placeName xml:id="fn4" key="Toul, France" ref="https://tools.wmflabs.org/geohack/geohack.php?params=48.675_N_5.8917_E">the town</placeName><note type="annotation" target="#fn4">
+                        <p>
+                          <ref target="https://books.google.com/books?id=cbvsmqOcR1wC">
+                            The Congregationalist and Advance, vol. 104</ref>, states that Voorhees was on duty with the 26th Division northwest of Toul when the hut was bombarded on June 19th. Voorhees was with C.W. Peel, of Fitchburg, MA.</p></note> where my hut was located. They demolished the hut
                         and incidentally sent a chunk of high explosive through my right leg. The
                         result has been that I have spent the summer of 1918 on the flat of my back
                         with the aforesaid leg hung up in a complicated apparatus which has kept my
                         right toe pointing at the North star for three months.</p>
-                    <p><interp type=" 'cheerful, confident spirit' "
-                            n="Silvers, Earl Reed. Obituaries and Memorials, p. 54."
-                            source="https://doi.org/doi:10.7282/T34M97D7">But it is not as bad as it
-                        sounds</interp>, and on the whole it has not been a bad summer. Uncle Sam's Army
+                        <p><interp xml:id="fn2">But it is not as bad as it
+                        sounds,</interp>
+                        <note type="annotation" target="#fn2">
+                          <quote>'cheerful, confident spirit'</quote>
+                          <ref target="https://doi.org/doi:10.7282/T34M97D7">Silvers, Earl Reed. Obituaries and Memorials, p. 54.</ref>
+                        </note> and on the whole it has not been a bad summer. Uncle Sam's Army
                             Hospitals are great institutions, and the best that medical science and
                             surgical skill can offer is yours to command. Also it is cheap.
                         I have saved at least $10000. in surgeon's fees by coming over to <pb n="5" /> to France to be shot up. So you
                         see I am considerably ahead of the game.</p>
-                    <p>Some day soon or late <interp type=" 'arrived in New York Christmas eve' " n="Association Men. v. 44. International Committee of the Associations, 1918, p. 456." source="https://books.google.com/books?id=XWQzAQAAMAAJ">I expect to get back to the States</interp>, and with a right
+                    <p>Some day soon or late <interp xml:id="fn3">I expect to get back to the States</interp><note type="annotation" target="#fn3">
+                    <quote>'arrived in New York Christmas eve'</quote>
+                    <ref target="https://books.google.com/books?id=XWQzAQAAMAAJ">Association Men. v. 44. International Committee of the Associations, 1918, p. 456.</ref>
+                  </note>, and with a right
                         leg adequate at last to the ancient and honerable game of golf. I am afraid,
                         however, I have lost my drive.</p>
                     <p>It begins to look as if America had sent a real army overseas. Well, it has

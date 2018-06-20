@@ -64,6 +64,14 @@
             <xsl:apply-templates/>
         </div>
     </xsl:template>
+    <xsl:template match="addrLine">
+           <xsl:apply-templates/><br/>
+    </xsl:template>
+    <xsl:template match="closer">
+        <div id="closer" style="text-align: left;">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
     <xsl:template match="p">
         <p>
             <xsl:apply-templates/>
@@ -87,11 +95,11 @@
         </a>
     </xsl:template>
     <xsl:template match="interp">
-        <a style="color:red;text-decoration:none;" href="{@source}"
-            title="{@type}&#013;&#013;{@n}, available at {@source}">
-            <xsl:value-of select="."/>
-        </a>
+        <span style="color:red;text-decoration:none;"><xsl:value-of select="."/></span>
     </xsl:template>
+
+    <xsl:template match="note[@type='annotation'] | note[@type='gloss']" /> <!-- ignore annotations and glosses for now -->
+
     <!-- The Firefox XSLT processor can't interpret percentages in the height attribute, but px okay. -->
     <xsl:template match="pb">
         <h4>Page: <xsl:value-of select="@n"/></h4>

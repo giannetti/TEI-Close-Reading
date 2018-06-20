@@ -87,11 +87,7 @@ Now that you have noted these, you are going to put proper code around them.
 
 **To obtain this, go to the Wikipedia page for the city and click on the latitude/longitude coordinates for the location. For large areas, such as entire countries or continents, just use the Wikipedia page URL.**
 
-**Alternately, for very specific locations that don't have Wikipedia entries, you can try using Google Maps to look up the latitude and longitude coordinates. Whenever you look up a location in Google Maps, the latitude and longitude appear, in that order, in the URL after the `@` sign.** 
-
-![Google Maps latitude and longitude coordinates in URL][1]
-
-[1]: gmaps-lat-lon.png
+**Alternately, for very specific locations that don't have Wikipedia entries, use <https://www.latlong.net/> to look up the latitude and longitude coordinates as decimal degrees.**
 
 **Then, enter those coordinates into the fields for decimal latitude and longitude into the GeoHack form at <https://tools.wmflabs.org/geohack/>. Click "Do it" and then copy the resulting URL as your `@ref` value.**
 

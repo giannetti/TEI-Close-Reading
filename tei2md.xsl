@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="#all">
-    
+
     <!-- Adapted from Alex Gil's tei-to-ed stylesheet at https://raw.githubusercontent.com/minicomp/ed/master/optional/tei-to-ed/tei-to-ed.xsl -->
 
     <xsl:output encoding="UTF-8" method="text"/>
@@ -39,7 +39,7 @@
             <xsl:apply-templates select="/teiCorpus/TEI/teiHeader/fileDesc/titleStmt/title" mode="toc"/>
             <xsl:text>&#x0A;</xsl:text>
             <xsl:text>---&#x0A;&#x0A;</xsl:text>
-            
+
             <!-- add link to manuscript images at top of page -->
 <!--            <xsl:text>Transcribed and edited from digital files available in RUcore&#x0A;&#x0A;</xsl:text>-->
             <xsl:text>Mss: </xsl:text>
@@ -55,10 +55,10 @@
             <xsl:apply-templates/>
 
             <!-- close the div -->
-            
+
         </xsl:result-document>
     </xsl:template>
-    
+
     <xsl:template match="teiHeader"/>
 
     <!-- check to see if multiple editors -->
@@ -68,13 +68,13 @@
             <xsl:text>,&#xA0;</xsl:text><xsl:apply-templates select="following-sibling::name"/>
         </xsl:if>
    </xsl:template>
-    
+
     <!-- generate toc in YAML header -->
     <xsl:template mode="toc" match="//TEI/teiHeader/fileDesc/titleStmt/title">
         <xsl:text>&#xa; - </xsl:text>
         <xsl:apply-templates/>
     </xsl:template>
-    
+
     <!-- retrieve title and body for each letter -->
     <xsl:template match="//TEI/text/body/div">
         <xsl:for-each select=".">
@@ -85,18 +85,18 @@
             <xsl:text>&#x0A;* * * &#x0A;</xsl:text>
         </xsl:for-each>
     </xsl:template>
-    
+
     <xsl:template match="lb">
         <xsl:text>&#x0A;</xsl:text>
         <xsl:apply-templates/>
     </xsl:template>
-    
+
     <xsl:template match="head | note[@type='letterhead']">
         <xsl:text>&lt;p class="centered large"&gt;</xsl:text>
         <xsl:apply-templates/>
         <xsl:text>&lt;/p&gt;</xsl:text>
     </xsl:template>
-    
+
     <xsl:template match="dateline/child::*">
         <xsl:text>&#x0A;</xsl:text>
         <xsl:text>&lt;p class="right"&gt;</xsl:text>
@@ -132,12 +132,12 @@
     <xsl:template match="hi[@rend = 'bold']">
         <xsl:text>**</xsl:text><xsl:apply-templates/><xsl:text>**</xsl:text>
     </xsl:template>
-    
+
     <!-- add page numbers -->
     <xsl:template match="pb">
         <xsl:text>&#x0A;### Page: </xsl:text><xsl:value-of select="@n"/><xsl:text>&#x0A;&#x0A;</xsl:text>
     </xsl:template>
-    
+
     <!-- data balloons for names of people and places -->
     <xsl:template match="persName">
         <xsl:text>&lt;button data-balloon-pos="up" data-balloon-length="large" data-balloon="</xsl:text>
@@ -149,6 +149,10 @@
         <xsl:value-of select="@to | @to-iso"/>
         <xsl:text>.&#10;</xsl:text>
         <xsl:value-of select="@role"/>
+        <xsl:if test="note">
+            <xsl:text> | </xsl:text>
+            <xsl:value-of select="note"/>
+        </xsl:if>
         <xsl:text>."&gt;</xsl:text>
 <!--        <xsl:text>&lt;a href=&apos;</xsl:text>
         <xsl:value-of select="@ref"/>
@@ -157,11 +161,15 @@
 <!--        <xsl:text>&lt;/a&gt;&#160;</xsl:text>-->
         <xsl:text>&lt;/button&gt;</xsl:text>
     </xsl:template>
-    
+
     <xsl:template match="placeName">
         <xsl:text>&lt;button data-balloon-pos="up" data-balloon-length="large" data-balloon="</xsl:text>
         <xsl:value-of disable-output-escaping="yes"
             select="@key/replace(replace(replace(replace(., '-', '—'), '\s+', ' '), $doubleQuotePat, $doubleQuoteRep), $singleQuotePat, $singleQuoteRep)"/>
+            <xsl:if test="note">
+                <xsl:text> | </xsl:text>
+                <xsl:value-of select="note"/>
+            </xsl:if>
         <xsl:text>"&gt;</xsl:text>
         <xsl:text>&lt;a href=&apos;</xsl:text>
         <xsl:value-of select="@ref"/>
@@ -170,7 +178,7 @@
         <xsl:text>&lt;/a&gt;&#160;</xsl:text>
         <xsl:text>&lt;/button&gt;</xsl:text>
     </xsl:template>
-    
+
     <!-- data balloons for iterpretation element -->
     <xsl:template match="interp">
         <xsl:text>&lt;button data-balloon-pos="up" data-balloon-length="large" data-balloon="</xsl:text>
@@ -187,7 +195,7 @@
         <xsl:apply-templates/>
         <xsl:text>&lt;/a&gt; &lt;/button&gt;</xsl:text>
     </xsl:template>
-    
+
     <xsl:template match="note"/>
 
 </xsl:stylesheet>
