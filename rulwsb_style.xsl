@@ -44,11 +44,6 @@
             </body>
         </html>
     </xsl:template>
-    <xsl:template match="lb">
-        <br>
-            <xsl:apply-templates/>
-        </br>
-    </xsl:template>
     <xsl:template match="head | note[@type='letterhead']">
         <div style="text-align: center;">
             <xsl:apply-templates/>
@@ -59,16 +54,19 @@
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-    <xsl:template match="salute">
+    <xsl:template match="opener/salute">
         <div style="text-align: left;">
             <xsl:apply-templates/>
         </div>
+    </xsl:template>
+    <xsl:template match="lb">
+        <xsl:apply-templates/><br/>
     </xsl:template>
     <xsl:template match="addrLine">
            <xsl:apply-templates/><br/>
     </xsl:template>
     <xsl:template match="closer">
-        <div id="closer" style="text-align: left;">
+        <div id="closer" style="margin-left: 2.5em;">
             <xsl:apply-templates/>
         </div>
     </xsl:template>

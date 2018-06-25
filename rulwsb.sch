@@ -4,13 +4,12 @@
     <ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
 
     <pattern>
-        <rule context="tei:TEI//@ref | tei:TEI//@who | tei:TEI//@corresp | tei:TEI//@wit">
+        <rule context="tei:TEI//@who">
             <assert test="starts-with(., '#')">
-                Attributes @ref, @who, @corresp and @wit must begin with a hashtag.
+                ERROR: The @who attribute must begin with a hashtag
             </assert>
         </rule>
     </pattern>
-
     <pattern>
         <rule context="tei:publicationStmt/child::tei:idno">
             <assert test="@type">
@@ -25,13 +24,20 @@
             </assert>
         </rule>
     </pattern>
-        <pattern>
-            <rule context="tei:div">
-                <assert test="@type">
-                    ERROR: The div element should have a @type attribute, i.e. @type="letter"
-                </assert>
-            </rule>
-        </pattern>
+    <pattern>
+        <rule context="tei:TEI">
+            <report test="matches(@xml:id, '\s+')">
+                ERROR: @xml:id values may NOT contain white spaces!
+            </report>
+        </rule>
+    </pattern>
+    <pattern>
+        <rule context="tei:div">
+            <assert test="@type">
+                ERROR: The div element should have a @type attribute, i.e. @type="letter"
+            </assert>
+        </rule>
+    </pattern>
     <pattern>
         <rule context="tei:pb">
             <assert test="@n">
@@ -46,32 +52,25 @@
         </rule>
     </pattern>
     <pattern>
-        <rule context="tei:*[@ref]">
-            <assert test="starts-with(@ref,'http:') or starts-with(@ref,'https:')">
+        <rule context="tei:TEI//tei:placeName/@ref | tei:TEI//tei:persName/@ref">
+            <assert test="starts-with(.,'http:') or starts-with(.,'https:')">
                 ERROR: All @ref attributes must point to a public URL beginning with http: or https:
             </assert>
         </rule>
     </pattern>
     <pattern>
-        <rule context="tei:note">
+        <rule context="tei:TEI//tei:note">
             <assert test="@type">
                 ERROR: All note elements must contain a @type attribute, i.e. @type="letterhead" or @type="footnote"
             </assert>
         </rule>
     </pattern>
-    <!--<pattern>
-        <rule context="tei:persName">
+    <pattern>
+        <rule context="tei:TEI//tei:persName | tei:TEI//tei:placeName">
             <assert test="@key">
-                ERROR: All &lt;persName&gt; elements need a @key attribute, which contains a regularized version of their
-                name, i.e. Lastname, Firstname
+                ERROR: All persName and placeName elements need a @key attribute, which contains a regularized version of their
+                name, i.e. Lastname, Firstname, or location, i.e., New Brunswick, New Jersey
             </assert>
         </rule>
     </pattern>
-    <pattern>
-        <rule context="tei:placeName">
-            <assert test="@key">
-                ERROR: All &lt;placeName&gt; elements need a @key attribute, which contains a regularized version of the location
-            </assert>
-        </rule>
-    </pattern>-->
 </schema>
