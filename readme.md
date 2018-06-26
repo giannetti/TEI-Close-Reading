@@ -13,11 +13,11 @@ Go to <https://github.com/giannetti/TEI-Close-Reading> and download the whole re
 -  pdfs/
 -  common-mistakes.md
 -  README.md
--  rulwsb_style.xsl
 -  rulwsb.sch
+-  rulwsb_style.xsl
 -  singlestyle.xsl
 -  singletemplate.xml
--  rucore00000002350.xml [this is a sample encoding]
+-  voorheesjb.xml [this is a sample encoding]
 
 Double click (Mac) or right-click (PC) to expand the contents of the zip folder. 
 
