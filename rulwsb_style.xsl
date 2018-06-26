@@ -44,12 +44,12 @@
             </body>
         </html>
     </xsl:template>
-    <xsl:template match="head | note[@type='letterhead']">
+    <xsl:template match="head | opener/note[@type='letterhead']">
         <div style="text-align: center;">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-    <xsl:template match="dateline/child::*">
+    <xsl:template match="opener/dateline">
         <div style="text-align: right;">
             <xsl:apply-templates/>
         </div>
@@ -65,8 +65,13 @@
     <xsl:template match="addrLine">
            <xsl:apply-templates/><br/>
     </xsl:template>
-    <xsl:template match="closer">
-        <div id="closer" style="margin-left: 2.5em;">
+    <xsl:template match="closer/salute">
+        <div style="margin-left: 1.5em;">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    <xsl:template match="closer/signed">
+        <div style="margin-left: 2.5em;">
             <xsl:apply-templates/>
         </div>
     </xsl:template>

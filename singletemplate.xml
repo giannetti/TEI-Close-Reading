@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-stylesheet type="text/xsl" href="singlestyle.xsl"?>
 
-<!-- including the TEI ns causes the Firefox XSLT processor to fail -->
-<!-- insert xmlns="http://www.tei-c.org/ns/1.0" into opening TEI tag for Oxygen XML Editor -->
-<TEI>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"> <!-- add the local id for your letter as the @xml:id value inside the TEI element, e.g. xml:id="rucore00000002350"  -->
 	<teiHeader>
 		<fileDesc>
 			<titleStmt>
-				<title><!-- insert title for your letter, e.g. [sender's name] to [recipient's name] --></title>
+				<title><!-- insert title for your letter, e.g. [sender's name] to [recipient's name], [date written] --></title>
 			</titleStmt>
 			<extent><!-- insert length of letter in pages, e.g. 2 p. --></extent>
 			<publicationStmt>
@@ -43,17 +43,17 @@
 					</dateline>
 					<salute><!-- opening salutation, e.g. Dear Silvers --></salute>
 				</opener>
-				
+
 				<p>
 					Sample text.
 					<persName>Name</persName>, <placeName>Place</placeName>, <interp>Claim</interp>.
 				</p>
-				
+
 				<closer>
 					<salute><!-- closing salutation, e.g. Very truly yours, --></salute><lb/>
 					<signed><!-- name of sender as given on letter --></signed>
 				</closer>
-				
+
 			</div>
 		</body>
 	</text>

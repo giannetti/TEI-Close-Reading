@@ -6,7 +6,7 @@
 
 <!-- including the TEI ns causes the Firefox XSLT processor to fail -->
 <!-- insert xmlns="http://www.tei-c.org/ns/1.0" into opening teiCorpus tag for Oxygen XML Editor -->
-<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xml:id="rucore00000002350">
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xml:id="voorheesjb">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -50,7 +50,7 @@
                 to reflect encoding changes.</change>
         </revisionDesc>
     </teiHeader>
-    <TEI xml:id="rucore00000002350_01">
+    <TEI xml:id="voorheesjb_01">
         <teiHeader>
             <fileDesc>
                 <titleStmt>
@@ -121,7 +121,7 @@
             </body>
         </text>
     </TEI>
-    <TEI xml:id="rucore00000002350_02">
+    <TEI xml:id="voorheesjb_02">
         <teiHeader>
             <fileDesc>
                 <titleStmt>
@@ -187,7 +187,7 @@
             </body>
         </text>
     </TEI>
-    <TEI xml:id="rucore00000002350_03">
+    <TEI xml:id="voorheesjb_03">
         <teiHeader>
             <fileDesc>
                 <titleStmt>
@@ -262,7 +262,7 @@
             </body>
         </text>
     </TEI>
-    <TEI xml:id="rucore00000002350_04">
+    <TEI xml:id="voorheesjb_04">
         <teiHeader>
             <fileDesc>
                 <titleStmt>
@@ -369,7 +369,7 @@
             </body>
         </text>
     </TEI>
-    <TEI xml:id="rucore00000002350_05">
+    <TEI xml:id="voorheesjb_05">
         <teiHeader>
             <fileDesc>
                 <titleStmt>
@@ -430,7 +430,7 @@
             </body>
         </text>
     </TEI>
-    <TEI xml:id="rucore00000002350_06">
+    <TEI xml:id="voorheesjb_06">
         <teiHeader>
             <fileDesc>
                 <titleStmt>
@@ -488,7 +488,7 @@
             </body>
         </text>
     </TEI>
-    <TEI xml:id="rucore00000002350_07">
+    <TEI xml:id="voorheesjb_07">
         <teiHeader>
             <fileDesc>
                 <titleStmt>
@@ -554,7 +554,7 @@
             </body>
         </text>
     </TEI>
-    <TEI xml:id="rucore00000002350_08">
+    <TEI xml:id="voorheesjb_08">
         <teiHeader>
             <fileDesc>
                 <titleStmt>
@@ -640,7 +640,7 @@
             </body>
         </text>
     </TEI>
-    <TEI xml:id="rucore00000002350_09">
+    <TEI xml:id="voorheesjb_09">
         <teiHeader>
             <fileDesc>
                 <titleStmt>
@@ -711,7 +711,7 @@
             </body>
         </text>
     </TEI>
-    <TEI xml:id="rucore00000002350_10">
+    <TEI xml:id="voorheesjb_10">
         <teiHeader>
             <fileDesc>
                 <titleStmt>
@@ -760,7 +760,7 @@
                         your <unclear quantity="2" unit="words"/> request for a picture of my
                         husband. some had been ordered and they have just arrived after all these
                         weeks. I am sending <unclear quantity="1" unit="words">one</unclear> to you
-                        under <unclear quantity="2" unit="words"/>. I understand you will <pb n="13"
+                        under <unclear quantity="2" unit="words">separate cover</unclear>. I understand you will <pb n="13"
                         /> return it. </p>
                     <p>There was certainly no more loyal son of Rutgers than <persName
                             key="Voorhees, John Brownlee" from="1875" to="1919" role="Minister"
