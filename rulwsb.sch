@@ -4,9 +4,9 @@
     <ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
 
     <pattern>
-        <rule context="tei:TEI//@who">
+        <rule context="tei:TEI//@who | tei:TEI//tei:note/@target">
             <assert test="starts-with(., '#')">
-                ERROR: The @who attribute must begin with a hashtag
+                ERROR: The @who and @target (inside note element) attributes must begin with a hashtag
             </assert>
         </rule>
     </pattern>
@@ -20,7 +20,14 @@
     <pattern>
         <rule context="tei:TEI">
             <assert test="@xml:id">
-                ERROR: Every TEI element must have an @xml:id attribute formed with the filename and the letter number separated by an underscore, i.e. rucore00000002350_01 is letter #1 in the rucore00000002350 file
+                ERROR: Every TEI element must have an @xml:id attribute formed with the filename and the letter number separated by an underscore, i.e. voorheesjb_01 is letter #1 in the voorheesjb file
+            </assert>
+        </rule>
+    </pattern>
+    <pattern>
+        <rule context="tei:interp">
+            <assert test="@xml:id">
+                ERROR: Every interp element must have an @xml:id attribute
             </assert>
         </rule>
     </pattern>
