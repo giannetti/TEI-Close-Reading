@@ -3,7 +3,7 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-stylesheet type="text/xsl" href="singlestyle.xsl"?>
 
-<TEI xmlns="http://www.tei-c.org/ns/1.0"> <!-- add the local id for your letter as the @xml:id value inside the TEI element, e.g. xml:id="rucore00000002350"  -->
+<TEI xmlns="http://www.tei-c.org/ns/1.0"> <!-- add a unique id formed by the last name and first initials of the Rutgers College alumnus as the @xml:id value inside the TEI element, e.g. xml:id="voorheesjb"  -->
 	<teiHeader>
 		<fileDesc>
 			<titleStmt>

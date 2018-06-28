@@ -59,7 +59,7 @@
         </xsl:result-document>
     </xsl:template>
 
-    <xsl:template match="teiHeader"/>
+    <xsl:template match="teiHeader"/> <!-- do nothing with teiHeader -->
 
     <!-- check to see if multiple editors -->
     <xsl:template mode="toc" match="//teiHeader/fileDesc/titleStmt/respStmt">
@@ -86,26 +86,38 @@
         </xsl:for-each>
     </xsl:template>
 
-    <xsl:template match="lb">
-        <xsl:text>&#x0A;</xsl:text>
+    <xsl:template match="lb | addrLine">
         <xsl:apply-templates/>
+        <xsl:text>&#x0A;</xsl:text>
     </xsl:template>
 
-    <xsl:template match="head | note[@type='letterhead']">
+    <xsl:template match="head | opener/note[@type='letterhead']">
         <xsl:text>&lt;p class="centered large"&gt;</xsl:text>
         <xsl:apply-templates/>
         <xsl:text>&lt;/p&gt;</xsl:text>
     </xsl:template>
 
-    <xsl:template match="dateline/child::*">
+    <xsl:template match="opener/dateline">
         <xsl:text>&#x0A;</xsl:text>
         <xsl:text>&lt;p class="right"&gt;</xsl:text>
             <xsl:value-of select="normalize-space(.)"/>
         <xsl:text>&lt;/p&gt;&#x0A;</xsl:text>
     </xsl:template>
-    <xsl:template match="salute">
+    <xsl:template match="opener/salute">
         <xsl:text>&#x0A;</xsl:text>
         <xsl:text>&lt;p class="left"&gt;</xsl:text>
+        <xsl:apply-templates/>
+        <xsl:text>&lt;/p&gt;&#x0A;</xsl:text>
+    </xsl:template>
+    <xsl:template match="closer/salute">
+        <xsl:text>&#x0A;</xsl:text>
+        <xsl:text>&lt;p class="indent-1"&gt;</xsl:text>
+        <xsl:apply-templates/>
+        <xsl:text>&lt;/p&gt;&#x0A;</xsl:text>
+    </xsl:template>
+    <xsl:template match="closer/signed">
+        <xsl:text>&#x0A;</xsl:text>
+        <xsl:text>&lt;p class="indent-2"&gt;</xsl:text>
         <xsl:apply-templates/>
         <xsl:text>&lt;/p&gt;&#x0A;</xsl:text>
     </xsl:template>
@@ -115,9 +127,14 @@
         <xsl:text>&#x0A;</xsl:text>
     </xsl:template>
     <xsl:template match="unclear">
-        <xsl:text>_</xsl:text>
-        <xsl:apply-templates/>
-        <xsl:text> [?]_</xsl:text>
+        <xsl:if test="not(text())">
+            <xsl:text>_[?]_</xsl:text>
+        </xsl:if>
+        <xsl:if test="text()">
+            <xsl:text>_</xsl:text>
+            <xsl:apply-templates/>
+            <xsl:text> [?]_</xsl:text>
+        </xsl:if>
     </xsl:template>
 
     <!-- sanitize text nodes for kramdown -->
@@ -149,10 +166,6 @@
         <xsl:value-of select="@to | @to-iso"/>
         <xsl:text>.&#10;</xsl:text>
         <xsl:value-of select="@role"/>
-        <xsl:if test="note">
-            <xsl:text> | </xsl:text>
-            <xsl:value-of select="note"/>
-        </xsl:if>
         <xsl:text>."&gt;</xsl:text>
 <!--        <xsl:text>&lt;a href=&apos;</xsl:text>
         <xsl:value-of select="@ref"/>
@@ -166,10 +179,6 @@
         <xsl:text>&lt;button data-balloon-pos="up" data-balloon-length="large" data-balloon="</xsl:text>
         <xsl:value-of disable-output-escaping="yes"
             select="@key/replace(replace(replace(replace(., '-', '—'), '\s+', ' '), $doubleQuotePat, $doubleQuoteRep), $singleQuotePat, $singleQuoteRep)"/>
-            <xsl:if test="note">
-                <xsl:text> | </xsl:text>
-                <xsl:value-of select="note"/>
-            </xsl:if>
         <xsl:text>"&gt;</xsl:text>
         <xsl:text>&lt;a href=&apos;</xsl:text>
         <xsl:value-of select="@ref"/>
@@ -179,23 +188,29 @@
         <xsl:text>&lt;/button&gt;</xsl:text>
     </xsl:template>
 
-    <!-- data balloons for iterpretation element -->
+    <!-- data balloons for interp element -->
     <xsl:template match="interp">
         <xsl:text>&lt;button data-balloon-pos="up" data-balloon-length="large" data-balloon="</xsl:text>
-        <xsl:value-of disable-output-escaping="yes" select="@type/replace(replace(replace(replace(., '-', '—'), '\s+', ' '), $doubleQuotePat, $doubleQuoteRep), $singleQuotePat, $singleQuoteRep)"/>
-        <xsl:if test="note">
-            <xsl:text> | </xsl:text>
-            <xsl:value-of select="note"/>
+        <xsl:variable name="interp_id" select="current()/@xml:id"/>
+        <xsl:if test="$interp_id eq current()/substring-after(following-sibling::note[1]/@target, '#')">
+            <xsl:if test="following-sibling::note[1]/p">
+                <xsl:value-of disable-output-escaping="yes" select="following-sibling::note[1]/p/replace(replace(replace(replace(., '-', '—'), '\s+', ' '), $doubleQuotePat, $doubleQuoteRep), $singleQuotePat, $singleQuoteRep)"/>
+            </xsl:if>
+            <xsl:if test="following-sibling::note[1]/quote">
+                <xsl:text>&apos;</xsl:text>
+                <xsl:value-of disable-output-escaping="yes" select="following-sibling::note[1]/quote/replace(replace(replace(replace(., '-', '—'), '\s+', ' '), $doubleQuotePat, $doubleQuoteRep), $singleQuotePat, $singleQuoteRep)"/>
+                <xsl:text>&apos;</xsl:text>
+            </xsl:if>
         </xsl:if>
         <xsl:text> | From: </xsl:text>
-        <xsl:value-of select="@n"/>
+        <xsl:value-of select="following-sibling::note[1]//ref"/>
         <xsl:text>"&gt; &lt;a href=&quot;</xsl:text>
-        <xsl:value-of select="@source"/>
+        <xsl:value-of select="following-sibling::note[1]//ref/@target"/>
         <xsl:text>&quot;&gt;</xsl:text>
         <xsl:apply-templates/>
         <xsl:text>&lt;/a&gt; &lt;/button&gt;</xsl:text>
     </xsl:template>
-
-    <xsl:template match="note"/>
+    
+    <xsl:template match="//div/p/note"/> <!-- ignore text of notes -->
 
 </xsl:stylesheet>

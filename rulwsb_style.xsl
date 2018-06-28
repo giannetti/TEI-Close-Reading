@@ -59,11 +59,8 @@
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-    <xsl:template match="lb">
+    <xsl:template match="lb | addrLine">
         <xsl:apply-templates/><br/>
-    </xsl:template>
-    <xsl:template match="addrLine">
-           <xsl:apply-templates/><br/>
     </xsl:template>
     <xsl:template match="closer/salute">
         <div style="margin-left: 1.5em;">

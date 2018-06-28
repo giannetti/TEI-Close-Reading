@@ -38,10 +38,7 @@
         </a>
     </xsl:template>
     <xsl:template match="interp">
-        <a style="color:red;text-decoration:none;" href="{@source}"
-            title="{@type}&#013;&#013;{@n}, available at {@source}">
-            <xsl:value-of select="."/>
-        </a>
+        <span style="color:red;text-decoration:none;"><xsl:value-of select="."/></span>
     </xsl:template>
     <xsl:template match="pb">
         <h4>Page: <xsl:value-of select="@n"/></h4>

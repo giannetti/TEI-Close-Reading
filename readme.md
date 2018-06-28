@@ -56,7 +56,7 @@ Re-read your page and look for the following things:
 
 + Any persons mentioned (including any he/she if they refer to a specific person)
 + Any places mentioned
-+ Any claims, assertions or arguments made, or statements in need of clarification  
++ Any events mentioned or statements in need of clarification  
 
 Now that you have noted these, you are going to put proper code around them.
 
@@ -91,17 +91,20 @@ Now that you have noted these, you are going to put proper code around them.
 
 **Then, enter those coordinates into the fields for decimal latitude and longitude into the GeoHack form at <https://tools.wmflabs.org/geohack/>. Click "Do it" and then copy the resulting URL as your `@ref` value.**
 
-**For claims or arguments**, *surround* your text (the entire statement being
+**For analytic annotations**, e.g. glosses (definitions) or editorial annotations, *surround* your text (the entire statement being
 made by the author) with these
 
-<code>&lt;interp type="reason" n="citation" cert="high" source="http://www.website.com/webpage.html"&gt; &lt;/interp&gt;</code>
+<code>&lt;interp xml:id="unique-id"&gt; &lt;/interp&gt; &lt;note type="reason" target="#unique-id"&gt; &lt;p&gt;Editorial annotation you supply&lt;/p&gt; &lt;ref target="http://www.website.com/webpage.html"&gt;Citation&lt;/ref&gt;</code>
 
-+ In **type**, explain the nature of the claim, based upon external evidence
-+ In **n**, put a full citation (as you would in an essay) to the relevant source. You won't be able to italicize the text, but this is fine.
-+ In **cert** (short for certainty), put: high, medium, low or unknown, depending on how much you trust the source you have used
-+ In **source**, put the link to the website where you got the information to assess this claim. 
++ In **xml:id** (attribute of `interp` element), create a unique identifier for the footnote you will create in step 2 (see below). E.g. fn1, fn2, etc.
++ After the closing `interp` tag, add a `note` element.
++ In **target** (attribute of `note` element), put the xml:id value you created in the corresponding `interp` element, preceded by a hashtag, e.g. `<note target="#fn1">`.
++ In **type** (attribute of `note` element), put a value of `gloss` or `annotation`, depending on whether you are supplying a definition or an annotation based on information gleaned from an external source.
++ As a child of the `note` element, add `p` tags inside of which you will put your editorial annotation. If you would like to include a direct quotation from an external source, use `quote` tags instead. 
++ As a second child of the `note` element, include a full citation (as you would in an essay) to the relevant source in a pair of `ref` tags. You won't be able to italicize the text, but this is fine. 
++ Inside the opening `ref` tag, in **target**, put the link to the website where you got the information to assess this claim.
 
-**Where to find these external sources for claims and arguments? If it is a definition or gloss that you seek, try the [Oxford English Dictionary](https://login.proxy.libraries.rutgers.edu/login?url=http://www.oed.com/). If it is further detail on an event the sender alludes to in the text of the letter, search for Silvers's supplementary material on that alumnus in [RUcore](https://rucore.libraries.rutgers.edu/). You may also try a Google search, although be aware that the information you find will vary in terms of its reliability.**
+**Where to find these external sources for editorial annotations? If it is a definition or gloss that you seek, try the [Oxford English Dictionary](https://login.proxy.libraries.rutgers.edu/login?url=http://www.oed.com/). If it is further detail on an event the sender alludes to in the text of the letter, search for Silvers's supplementary material on that alumnus in [RUcore](https://rucore.libraries.rutgers.edu/). You may also try a Google search, although be aware that the information you find will vary in terms of its reliability.**
 
 **How should you cite these sources? Follow the conventions for citing web resources as a footnote/endnote in Chicago Style. Guidelines at <https://owl.english.purdue.edu/owl/resource/717/05/>.**
 
@@ -109,9 +112,7 @@ When you are happy with your work, hit cntl+s (PC) or command+s (Mac) to save yo
 
 ## Viewing Your Encoded Text
 
-Once you have saved your file, close the document. Open either Internet Explorer or Firefox. The following will not work in Chrome because it does not have an XML parser.
-
-Making sure both your `singletemplate.xml` file and your `singlestyle.xsl` file are in the same folder (or both on your desktop), drag the icon for `singletemplate.xml` into your Internet Explorer or Firefox browser window.
+Once you have saved your file, in Atom, press COMMAND-SHIFT-P (Mac). Search for, and select the Atom-Xsltransform package. Then, enter the file path to the appropriate stylesheet, e.g. `/Users/Me/TEI-Close-Reading/singlestyle.xsl` (Mac). Save the resulting HTML document to your working directory with a file name ending in .html. With your cursor in the new HTML document, press CTRL-SHIFT-H to preview your HTML document. 
 
 If you now see a color-coded version of your text, congratulations! If you hover over the colored sections, you should see a pop-up with the additional information you entered.
 
@@ -121,7 +122,7 @@ If your text comes up only in black, with no paragraph divisions or headings, or
 
 * Placed `</p>` at the end of every paragraph, including the end of the page
 
-* Made sure all your `<persName>`, `<placeName>` and `<interp>` tags are properly enclosed in `<>`s
+* Made sure all your `<persName>`, `<placeName>`, `<interp>` and `<note>` tags are properly enclosed in `<>`s
 
 * Made sure you have both an open `<>` and close `<\>` tag for each tag you use
 
@@ -131,9 +132,9 @@ If your text comes up only in black, with no paragraph divisions or headings, or
 
 * Made sure you do NOT have a space after the `=` of an attribute
 
-If your text still does not appear formatted, you may need to remove the text one paragraph at a time, refreshing your browser window, until it appears. This will help you identify which paragraph (or sentence) has the error within it). You may also find an online XML validator to be helpful. Try the one offered by W3Schools at <https://www.w3schools.com/xml/xml_validator.asp>. 
+If your text still does not appear formatted, you may need to remove the text one paragraph at a time, regenerating the HTML, until it appears. This will help you identify which paragraph (or sentence) has the error within it). You may also find an online XML validator to be helpful. Try the one offered by W3Schools at <https://www.w3schools.com/xml/xml_validator.asp>. 
 
-Once you have you a fully formatted file, pat yourself on the back for your hard work! If we have enough encoded letters, we may progress to creating an online edition of our correspondence.
+Once you have you a fully formatted file, pat yourself on the back for your hard work! If we have enough encoded letters, we may progress to creating a `teiCorpus` file with the collected correspondence for each alumnus, and an online edition with our edited correspondence.
 
 ## Resources
 

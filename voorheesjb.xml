@@ -48,6 +48,7 @@
                 Added schema declarations.</change>
             <change when="2018-06-25" who="#FG">Encoded two additional letters. Inserted addrLine elements for each line of addresses. Updated schematron
                 to reflect encoding changes.</change>
+            <change when="2018-06-28" who="#FG">Added extent for each individual letter.</change>
         </revisionDesc>
     </teiHeader>
     <TEI xml:id="voorheesjb_01">
@@ -127,6 +128,7 @@
                 <titleStmt>
                     <title>Earl Reed Silvers to John Brownlee Voorhees, April 25, 1918</title>
                 </titleStmt>
+                <extent>1 p.</extent>
                 <publicationStmt>
                     <publisher>Rutgers University Libraries</publisher>
                     <distributor> Rutgers Community Repository (RUcore) URL:
@@ -193,6 +195,7 @@
                 <titleStmt>
                     <title>John Brownlee Voorhees to Earl Reed Silvers, May 2, 1918</title>
                 </titleStmt>
+                <extent>1 p.</extent>
                 <publicationStmt>
                     <publisher>Rutgers University Libraries</publisher>
                     <distributor> Rutgers Community Repository (RUcore) URL:
@@ -268,6 +271,7 @@
                 <titleStmt>
                     <title>John Brownlee Voorhees to Earl Reed Silvers, Sept 18, 1918</title>
                 </titleStmt>
+                <extent>2 p.</extent>
                 <publicationStmt>
                     <publisher>Rutgers University Libraries</publisher>
                     <distributor> Rutgers Community Repository (RUcore) URL:
@@ -318,15 +322,15 @@
                                 > Boche, n. and adj. OED Online. June 2017. Oxford University
                                 Press.</ref>
                             <p>A derogatory term for a German. Usually plural.</p>
-                        </note> considered my activites too dangerous, and decided to shoot up
+                        </note> considered my activities too dangerous, and decided to shoot up
                             <interp xml:id="fn4">the town</interp><note type="annotation"
                             target="#fn4">
-                            <p>
-                                <ref target="https://books.google.com/books?id=cbvsmqOcR1wC"> The
-                                    Congregationalist and Advance, vol. 104</ref>, states that
-                                Voorhees was on duty with the 26th Division northwest of Toul,
+                            <p>Voorhees was on duty with the 26th Division northwest of Toul,
                                 France, when the hut was bombarded on June 19th. Voorhees was with
-                                C.W. Peel, of Fitchburg, MA.</p></note> where my hut was located.
+                                C.W. Peel, of Fitchburg, MA.</p>
+                            <ref target="https://books.google.com/books?id=cbvsmqOcR1wC">The
+                                    Congregationalist and Advance, vol. 104</ref>
+                            </note> where my hut was located.
                         They demolished the hut and incidentally sent a chunk of high explosive
                         through my right leg. The result has been that I have spent the summer of
                         1918 on the flat of my back with the aforesaid leg hung up in a complicated
@@ -348,7 +352,7 @@
                             <ref target="https://books.google.com/books?id=XWQzAQAAMAAJ">Association
                                 Men. v. 44. International Committee of the Associations, 1918, p.
                                 456.</ref>
-                        </note>, and with a right leg adequate at last to the ancient and honerable
+                        </note>, and with a right leg adequate at last to the ancient and honorable
                         game of golf. I am afraid, however, I have lost my drive.</p>
                     <p>It begins to look as if America had sent a real army overseas. Well, it has
                         been on of the big privileges of my life to have some association with it,
@@ -375,6 +379,7 @@
                 <titleStmt>
                     <title>Earl Reed Silvers to John Brownlee Voorhees, October 24, 1918</title>
                 </titleStmt>
+                <extent>1 p.</extent>
                 <publicationStmt>
                     <publisher>Rutgers University Libraries</publisher>
                     <distributor> Rutgers Community Repository (RUcore) URL:
@@ -436,6 +441,7 @@
                 <titleStmt>
                     <title>Earl Reed Silvers to Juliana Deyo Voorhees, January 13, 1919</title>
                 </titleStmt>
+                <extent>1 p.</extent>
                 <publicationStmt>
                     <publisher>Rutgers University Libraries</publisher>
                     <distributor> Rutgers Community Repository (RUcore) URL:
@@ -494,6 +500,7 @@
                 <titleStmt>
                     <title>Earl Reed Silvers to Irving H. Berg, February 3, 1919</title>
                 </titleStmt>
+                <extent>1 p.</extent>
                 <publicationStmt>
                     <publisher>Rutgers University Libraries</publisher>
                     <distributor> Rutgers Community Repository (RUcore) URL:
@@ -560,6 +567,7 @@
                 <titleStmt>
                     <title>Irving H. Berg to Earl Reed Silvers, Feb. 4, 1919</title>
                 </titleStmt>
+                <extent>1 p.</extent>
                 <publicationStmt>
                     <publisher>Rutgers University Libraries</publisher>
                     <distributor> Rutgers Community Repository (RUcore) URL:
@@ -646,6 +654,7 @@
                 <titleStmt>
                     <title>Earl Reed Silvers to Irving H. Berg, Feb. 5, 1919</title>
                 </titleStmt>
+                <extent>1 p.</extent>
                 <publicationStmt>
                     <publisher>Rutgers University Libraries</publisher>
                     <distributor> Rutgers Community Repository (RUcore) URL:
@@ -717,6 +726,7 @@
                 <titleStmt>
                     <title>Juliana Deyo Voorhees to Earl Reed Silvers, n.d.</title>
                 </titleStmt>
+                <extent>2 p.</extent>
                 <publicationStmt>
                     <publisher>Rutgers University Libraries</publisher>
                     <distributor> Rutgers Community Repository (RUcore) URL:
