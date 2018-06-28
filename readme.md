@@ -6,7 +6,7 @@ This workshop will explore a subset of the [Personal Correspondence, 1917-1919](
 
 ## Setting Up Your Workspace
 
-You will be assigned a file of correspondence organized by Rutgers alumnus. Each file has a filename that corresponds to the name of the alumnus. 
+You will be assigned a file of correspondence organized by Rutgers alumnus. Each file has a filename that corresponds to the name of the alumnus.
 
 Go to <https://github.com/giannetti/TEI-Close-Reading> and download the whole repository, including:
 
@@ -19,9 +19,9 @@ Go to <https://github.com/giannetti/TEI-Close-Reading> and download the whole re
 -  singletemplate.xml
 -  voorheesjb.xml [this is a sample encoding]
 
-Double click (Mac) or right-click (PC) to expand the contents of the zip folder. 
+Double click (Mac) or right-click (PC) to expand the contents of the zip folder.
 
-Once downloaded, drag and drop the expanded file onto your desktop. Open the `singletemplate.xml` file. It should open with Notepad (PC) or TextEdit (Mac). 
+Once downloaded, drag and drop the expanded file onto your desktop. Open the `singletemplate.xml` file in the Atom text editor.
 
 Place your XML document on one side of your screen.
 
@@ -50,7 +50,7 @@ You do not need to worry about line breaks but should start every new paragraph 
 
 You are now going to *encode* or *mark up* your text.  
 
-At the start of your transcription, and at the start every new paragraph (or heading), place a `<p>`. This explains to the computer that a new paragraph has begun. At the end every paragraph (or heading), place a `</p>`. 
+At the start of your transcription, and at the start every new paragraph (or heading), place a `<p>`. This explains to the computer that a new paragraph has begun. At the end every paragraph (or heading), place a `</p>`.
 
 Re-read your page and look for the following things:
 
@@ -66,7 +66,7 @@ Now that you have noted these, you are going to put proper code around them.
 
 + Inside the quotation marks for **key**, include the real full name of the person mentioned  
 + In **from** and **to**, include their birth and death years, using ???? for unknown years  
-+ In **role**, put the occupation, role or 'claim to fame' for this individual 
++ In **role**, put the occupation, role or 'claim to fame' for this individual
 + In **ref**, put the URL (link) to a reliable and/or authoritative website where you found this information. Ask for help vetting a website, if you are not sure about its reliability.
 
 **To find information on the people mentioned in your letters, try these sources:**
@@ -83,7 +83,7 @@ Now that you have noted these, you are going to put proper code around them.
                             > </placeName>`
 
 + In **key**, put the city, state and/or country with the best information you can find for the modern names of this location
-+ In **ref**, put a link to the relevant coordinates on the [Wikipedia GeoHack website](https://tools.wmflabs.org/geohack/) 
++ In **ref**, put a link to the relevant coordinates on the [Wikipedia GeoHack website](https://tools.wmflabs.org/geohack/)
 
 **To obtain this, go to the Wikipedia page for the city and click on the latitude/longitude coordinates for the location. For large areas, such as entire countries or continents, just use the Wikipedia page URL.**
 
@@ -92,17 +92,22 @@ Now that you have noted these, you are going to put proper code around them.
 **Then, enter those coordinates into the fields for decimal latitude and longitude into the GeoHack form at <https://tools.wmflabs.org/geohack/>. Click "Do it" and then copy the resulting URL as your `@ref` value.**
 
 **For analytic annotations**, e.g. glosses (definitions) or editorial annotations, *surround* your text (the entire statement being
-made by the author) with these
+made by the author) with `interp` tags.
 
-<code>&lt;interp xml:id="unique-id"&gt; &lt;/interp&gt; &lt;note type="reason" target="#unique-id"&gt; &lt;p&gt;Editorial annotation you supply&lt;/p&gt; &lt;ref target="http://www.website.com/webpage.html"&gt;Citation&lt;/ref&gt;</code>
+`<interp xml:id="unique-id"> </interp>
+<note type="reason" target="#unique-id">
+     <p>Editorial annotation you supply</p>
+     <ref target="http://www.website.com/webpage.html">Citation</ref>
+</note>`
 
 + In **xml:id** (attribute of `interp` element), create a unique identifier for the footnote you will create in step 2 (see below). E.g. fn1, fn2, etc.
 + After the closing `interp` tag, add a `note` element.
 + In **target** (attribute of `note` element), put the xml:id value you created in the corresponding `interp` element, preceded by a hashtag, e.g. `<note target="#fn1">`.
 + In **type** (attribute of `note` element), put a value of `gloss` or `annotation`, depending on whether you are supplying a definition or an annotation based on information gleaned from an external source.
-+ As a child of the `note` element, add `p` tags inside of which you will put your editorial annotation. If you would like to include a direct quotation from an external source, use `quote` tags instead. 
-+ As a second child of the `note` element, include a full citation (as you would in an essay) to the relevant source in a pair of `ref` tags. You won't be able to italicize the text, but this is fine. 
++ As a child of the `note` element, add `p` tags inside of which you will put your editorial annotation. If you would like to include a direct quotation from an external source, use `quote` tags instead.
++ As a second child of the `note` element, include a full citation (as you would in an essay) to the relevant source in a pair of `ref` tags. You won't be able to italicize the text, but this is fine.
 + Inside the opening `ref` tag, in **target**, put the link to the website where you got the information to assess this claim.
++ Double-check that your `p` or `quote` and `ref` elements are enclosed in a pair of opening and closing `note` tags.
 
 **Where to find these external sources for editorial annotations? If it is a definition or gloss that you seek, try the [Oxford English Dictionary](https://login.proxy.libraries.rutgers.edu/login?url=http://www.oed.com/). If it is further detail on an event the sender alludes to in the text of the letter, search for Silvers's supplementary material on that alumnus in [RUcore](https://rucore.libraries.rutgers.edu/). You may also try a Google search, although be aware that the information you find will vary in terms of its reliability.**
 
@@ -112,7 +117,7 @@ When you are happy with your work, hit cntl+s (PC) or command+s (Mac) to save yo
 
 ## Viewing Your Encoded Text
 
-Once you have saved your file, in Atom, press COMMAND-SHIFT-P (Mac). Search for, and select the Atom-Xsltransform package. Then, enter the file path to the appropriate stylesheet, e.g. `/Users/Me/TEI-Close-Reading/singlestyle.xsl` (Mac). Save the resulting HTML document to your working directory with a file name ending in .html. With your cursor in the new HTML document, press CTRL-SHIFT-H to preview your HTML document. 
+Once you have saved your file, in Atom, press COMMAND-SHIFT-P (Mac). Search for, and select the Atom-Xsltransform package. Then, enter the file path to the appropriate stylesheet, e.g. `/Users/Me/TEI-Close-Reading/singlestyle.xsl` (Mac). Save the resulting HTML document to your working directory with a file name ending in .html. With your cursor in the new HTML document, press CTRL-SHIFT-H to preview your HTML document.
 
 If you now see a color-coded version of your text, congratulations! If you hover over the colored sections, you should see a pop-up with the additional information you entered.
 
@@ -132,7 +137,7 @@ If your text comes up only in black, with no paragraph divisions or headings, or
 
 * Made sure you do NOT have a space after the `=` of an attribute
 
-If your text still does not appear formatted, you may need to remove the text one paragraph at a time, regenerating the HTML, until it appears. This will help you identify which paragraph (or sentence) has the error within it). You may also find an online XML validator to be helpful. Try the one offered by W3Schools at <https://www.w3schools.com/xml/xml_validator.asp>. 
+If your text still does not appear formatted, you may need to remove the text one paragraph at a time, regenerating the HTML, until it appears. This will help you identify which paragraph (or sentence) has the error within it). You may also find an online XML validator to be helpful. Try the one offered by W3Schools at <https://www.w3schools.com/xml/xml_validator.asp>.
 
 Once you have you a fully formatted file, pat yourself on the back for your hard work! If we have enough encoded letters, we may progress to creating a `teiCorpus` file with the collected correspondence for each alumnus, and an online edition with our edited correspondence.
 
