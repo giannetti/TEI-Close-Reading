@@ -10,7 +10,6 @@ You will be assigned a file of correspondence organized by Rutgers alumnus. Each
 
 Go to <https://github.com/giannetti/TEI-Close-Reading> and download the whole repository, including:
 
--  pdfs/
 -  common-mistakes.md
 -  README.md
 -  rulwsb.sch
@@ -73,6 +72,7 @@ Now that you have noted these, you are going to put proper code around them.
 
 1. Silvers's supplementary material on the alumnus in RUcore, <https://rucore.libraries.rutgers.edu/>.
 2. HathiTrust full text search, <https://www.libraries.rutgers.edu/indexes/hathitrust>.
+3. The Virtual International Authority File (VIAF), <https://viaf.org/>.
 
 *NB: If there is a `&` in your link, you will need to replace this with `&amp;amp;`*
 
@@ -109,9 +109,9 @@ made by the author) with `interp` tags.
 + Inside the opening `ref` tag, in **target**, put the link to the website where you got the information to assess this claim.
 + Double-check that your `p` or `quote` and `ref` elements are enclosed in a pair of opening and closing `note` tags.
 
-**Where to find these external sources for editorial annotations? If it is a definition or gloss that you seek, try the [Oxford English Dictionary](https://login.proxy.libraries.rutgers.edu/login?url=http://www.oed.com/). If it is further detail on an event the sender alludes to in the text of the letter, search for Silvers's supplementary material on that alumnus in [RUcore](https://rucore.libraries.rutgers.edu/). You may also try a Google search, although be aware that the information you find will vary in terms of its reliability.**
+**Where to find these external sources for editorial annotations? If it is a definition or gloss that you seek, try the [Oxford English Dictionary](https://login.proxy.libraries.rutgers.edu/login?url=http://www.oed.com/). If it is further detail on an event the sender alludes to in the text of the letter, search for Silvers's supplementary material on that alumnus in [RUcore](https://rucore.libraries.rutgers.edu/). In second order of preference, try searching for news articles about the event in [ProQuest Historical Newspapers](https://www.libraries.rutgers.edu/indexes/proquest_historical_newspapers). As a last resort, you may try a Google search, although be aware that the information you find will vary in terms of its reliability.**
 
-**How should you cite these sources? Follow the conventions for citing web resources as a footnote/endnote in Chicago Style. Guidelines at <https://owl.english.purdue.edu/owl/resource/717/05/>.**
+**How should you cite these sources? Follow the conventions for citing web resources as a footnote/endnote in Chicago Style. Guidelines at <https://owl.purdue.edu/owl/research_and_citation/chicago_manual_17th_edition/web_sources.html>.**
 
 When you are happy with your work, hit cntl+s (PC) or command+s (Mac) to save your work.
 

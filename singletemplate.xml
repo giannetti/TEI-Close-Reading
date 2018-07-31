@@ -36,8 +36,8 @@
 				<!-- in the @n attribute of pb, indicate the page number, e.g. pb n="1" -->
 				<pb n="" />
 				<opener>
-					<!-- enter information on the opener of your letter, including dates and names -->
-					<!-- see http://www.wwp.northeastern.edu/research/publications/guide/html/text_openerCloser.html for examples -->
+					<!-- enter information on the opener of your letter, including dates, places and names -->
+					<!-- see https://github.com/rutgersdh/wsb-data/blob/master/letters/voorheesjb.xml for examples -->
 					<dateline>
 						<date><!-- date as given on letter --></date>
 					</dateline>

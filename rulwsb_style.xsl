@@ -2,49 +2,62 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" xmlns="http://www.w3.org/1999/xhtml"
     version="2.0">
-    <!-- The Firefox XSLT processor only accepts method html. -->
-    <xsl:output method="html" encoding="UTF-8" indent="yes"/>
+
+    <xsl:output method="xhtml" encoding="UTF-8" indent="yes"/>
 
     <xsl:template match="/">
         <html>
             <body>
                 <div style="text-align: center;">
                     <h2>
-                        <xsl:value-of select="/teiCorpus/teiHeader/fileDesc/titleStmt/title"/>
+                        <xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title"/>
                     </h2>
                     <h4>
                         <xsl:value-of
-                            select="/teiCorpus/teiHeader/fileDesc/publicationStmt/authority"/>
+                            select="/TEI/teiHeader/fileDesc/publicationStmt/authority"/>
                         <br/>
                         <xsl:text>URL: </xsl:text>
-                        <a href="{/teiCorpus/teiHeader/fileDesc/publicationStmt/idno[@type='URI']}" target="_blank">
+                        <a href="{/TEI/teiHeader/fileDesc/publicationStmt/idno[@type='URI']}" target="_blank">
                             <xsl:value-of
-                                select="/teiCorpus/teiHeader/fileDesc/publicationStmt/idno[@type='URI']"
+                                select="/TEI/teiHeader/fileDesc/publicationStmt/idno[@type='URI']"
                             />
                         </a>
                     </h4>
                 </div>
                 <hr/>
-                <xsl:for-each select="/teiCorpus/TEI/text/body/div[@type='letter']">
+               <xsl:for-each select="/TEI/text/body/div[@type='letter']">
+                   <xsl:variable name="current_div" select="."/>
                     <h3>
-                        <xsl:value-of select="ancestor::TEI/teiHeader/fileDesc/titleStmt/title"/>
+                        <xsl:variable name="letter_id" select="$current_div/substring-after(@decls, '#')"/>
+                        <xsl:for-each select="/TEI/teiHeader/profileDesc/correspDesc">
+                            <xsl:variable name="current_correspDesc" select="."/>
+                            <xsl:if test="$letter_id eq $current_correspDesc/@xml:id">
+                                <xsl:value-of select="$current_correspDesc/correspAction[@type='sent']/persName"/>
+                                <xsl:text> to </xsl:text>
+                                <xsl:value-of select="$current_correspDesc/correspAction[@type='received']/persName"/>
+                                <xsl:text>, </xsl:text>
+                                <xsl:value-of select="$current_correspDesc/correspAction[@type='sent']/date"/>
+                            </xsl:if>
+                        </xsl:for-each>
                     </h3>
-                    <p id="{ancestor::TEI/@xml:id}">
+                    <p id="{@decls}">
                         <xsl:apply-templates/>
                     </p>
                     <hr style="border-top: 1px dotted #8c8b8b;"/>
                 </xsl:for-each>
-
+                
                 <h3>Key:</h3>
                 <ul>
                     <li style="color:blue;text-decoration:none;">Individual</li>
                     <li style="color:#00CC00;text-decoration:none;">Location</li>
                     <li style="color:red;text-decoration:none;">Claim</li>
                 </ul>
+              
             </body>
         </html>
     </xsl:template>
-    <xsl:template match="head | opener/note[@type='letterhead']">
+    
+    <xsl:template match="head | note[@type='letterhead']">
         <div style="text-align: center;">
             <xsl:apply-templates/>
         </div>
@@ -95,12 +108,21 @@
         </a>
     </xsl:template>
     <xsl:template match="interp">
-        <span style="color:red;text-decoration:none;"><xsl:value-of select="."/></span>
+         <a href="#{generate-id()}" style="color:red;text-decoration:none;"><xsl:apply-templates/></a>
+<!--        <xsl:for-each select="@xml:id">
+            <xsl:variable name="current_interp_id" select="."/>
+            <xsl:for-each select="//note[not(@type='letterhead')]">
+                <xsl:variable name="current_note_id" select="substring-after(./@target, '#')"/>
+                <xsl:if test="$current_interp_id eq $current_note_id">
+                <xsl:variable name="popup" select="//note[not(@type='letterhead')]/p | //note[not(@type='letterhead')]/quote"/>
+                    <a href="#{generate-id()}" style="color:red;text-decoration:none;" title="{$popup}"><xsl:apply-templates /></a>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:for-each>-->
     </xsl:template>
-
-    <xsl:template match="note[@type='annotation'] | note[@type='gloss']" /> <!-- ignore annotations and glosses for now -->
-
-    <!-- The Firefox XSLT processor can't interpret percentages in the height attribute, but px okay. -->
+    
+    <xsl:template match="note[not(@type='letterhead')]"/> <!-- ignore editorial notes -->
+    
     <xsl:template match="pb">
         <h4>Page: <xsl:value-of select="@n"/></h4>
         <br/>
