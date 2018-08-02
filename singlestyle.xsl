@@ -11,10 +11,10 @@
                 <h4>
                     <xsl:value-of select="TEI/teiHeader/fileDesc/titleStmt/title"/>
                 </h4>
-                <xsl:for-each select="TEI/text/body/div/p">
-                    <p>
+                <xsl:for-each select="TEI/text/body/div">
+                    <div>
                         <xsl:apply-templates/>
-                    </p>
+                    </div>
                 </xsl:for-each>
 
                 <h3>Key:</h3>
@@ -22,6 +22,8 @@
                     <li style="color:blue;text-decoration:none;">Individual</li>
                     <li style="color:#00CC00;text-decoration:none;">Location</li>
                     <li style="color:red;text-decoration:none;">Claim</li>
+                    <li style="color:0DFFDA;text-decoration:none;">Opener</li>
+                    <li style="color:E8A30C;text-decoration:none;">Closer</li>
                 </ul>
             </body>
         </html>
@@ -42,5 +44,11 @@
     </xsl:template>
     <xsl:template match="pb">
         <h4>Page: <xsl:value-of select="@n"/></h4>
+    </xsl:template>
+    <xsl:template match="opener/child::*">
+        <div style="color:0DFFDA;text-decoration:none;"><xsl:apply-templates/></div>
+    </xsl:template>
+    <xsl:template match="closer/child::*">
+        <div style="color:E8A30C;text-decoration:none;"><xsl:apply-templates/></div>
     </xsl:template>
 </xsl:stylesheet>
