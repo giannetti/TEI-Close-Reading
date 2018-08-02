@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="rulwsb.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Conklin, Sherman S.</title>
+                <respStmt>
+                    <resp>Transcription and encoding by</resp>
+                    <name xml:id=""> <!-- insert name of encoder here; add initials as value of @xml:id --> </name>
+                </respStmt>
+            </titleStmt>
+            <extent> <!-- insert total pages of alumnus PDF --> </extent>
+            <publicationStmt>
+                <publisher>Rutgers University Libraries</publisher>
+                <distributor> Rutgers Community Repository (RUcore) URL:
+                    https://rucore.libraries.rutgers.edu </distributor>
+                <availability>
+                    <p>No Known Copyright</p>
+                </availability>
+                <authority>Transcribed from digital files available in RUcore</authority>
+                <idno type="URI">https://doi.org/doi:10.7282/T3MC92RK</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>Special Collections and University Archives, Rutgers University
+                            Libraries</repository>
+                        <collection>Rutgers College. War Service Bureau. Records,
+                            1917-1919</collection>
+                        <idno>RG 33/C0/01</idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <correspDesc xml:id=""> 
+                <correspAction type="sent">
+                    <persName><!-- insert name of sender --></persName>
+                    <placeName><!-- insert sender location --></placeName>
+                    <date when=""><!-- insert date sent; include machine readble version in @when --></date>
+                </correspAction>
+                <correspAction type="received">
+                    <persName><!-- insert name of addressee --></persName>
+                    <placeName><!-- insert location of addressee --></placeName>
+                </correspAction>
+            </correspDesc>
+            <correspDesc xml:id=""> 
+                <correspAction type="sent">
+                    <persName><!-- insert name of sender --></persName>
+                    <placeName><!-- insert sender location --></placeName>
+                    <date when=""><!-- insert date sent; include machine readble version in @when --></date>
+                </correspAction>
+                <correspAction type="received">
+                    <persName><!-- insert name of addressee --></persName>
+                    <placeName><!-- insert location of addressee --></placeName>
+                </correspAction>
+            </correspDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change/>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            
+            <div type="letter" decls="">
+                <pb n=""/>
+                
+            </div>
+            
+            
+            <div type="letter" decls="">
+                <pb n=""/>
+                
+            </div>
+
+        </body>
+    </text>
+</TEI>
