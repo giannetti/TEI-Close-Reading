@@ -92,9 +92,9 @@ Now that you have noted these, you are going to put proper code around them.
 **Then, enter those coordinates into the fields for decimal latitude and longitude into the GeoHack form at <https://tools.wmflabs.org/geohack/>. Click "Do it" and then copy the resulting URL as your `@ref` value.**
 
 **For analytic annotations**, e.g. glosses (definitions) or editorial annotations, *surround* your text (the entire statement being
-made by the author) with `interp` tags.
+made by the author) with `seg` tags.
 
-`<interp xml:id="unique-id"> </interp>
+`<seg xml:id="unique-id"> </seg>
 <note type="reason" target="#unique-id">
      <p>Editorial annotation you supply</p>
      <ref target="http://www.website.com/webpage.html">Citation</ref>
