@@ -46,7 +46,7 @@
 
 				<p>
 					Sample text.
-					<persName>Name</persName>, <placeName>Place</placeName>, <interp>Claim</interp>.
+					<persName>Name</persName>, <placeName>Place</placeName>, <seg>Claim</seg>.
 				</p>
 
 				<closer>

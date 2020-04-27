@@ -64,7 +64,7 @@ Now that you have noted these, you are going to put proper code around them.
 <code>&lt;persName key="Last, First" from="YYYY" to="YYYY" role="Occupation" ref="http://www.website.com/webpage.html"&gt; &lt;/persName&gt;</code>
 
 + Inside the quotation marks for **key**, include the real full name of the person mentioned  
-+ In **from** and **to**, include their birth and death years, using ???? for unknown years  
++ In **from** and **to**, include their birth and death years, using `----` for unknown years  
 + In **role**, put the occupation, role or 'claim to fame' for this individual
 + In **ref**, put the URL (link) to a reliable and/or authoritative website where you found this information. Ask for help vetting a website, if you are not sure about its reliability.
 
@@ -100,9 +100,9 @@ made by the author) with `seg` tags.
      <ref target="http://www.website.com/webpage.html">Citation</ref>
 </note>`
 
-+ In **xml:id** (attribute of `interp` element), create a unique identifier for the footnote you will create in step 2 (see below). E.g. fn1, fn2, etc.
-+ After the closing `interp` tag, add a `note` element.
-+ In **target** (attribute of `note` element), put the xml:id value you created in the corresponding `interp` element, preceded by a hashtag, e.g. `<note target="#fn1">`.
++ In **xml:id** (attribute of `seg` element), create a unique identifier for the footnote you will create in step 2 (see below). E.g. fn1, fn2, etc.
++ After the closing `seg` tag, add a `note` element.
++ In **target** (attribute of `note` element), put the xml:id value you created in the corresponding `seg` element, preceded by a hashtag, e.g. `<note target="#fn1">`.
 + In **type** (attribute of `note` element), put a value of `gloss` or `annotation`, depending on whether you are supplying a definition or an annotation based on information gleaned from an external source.
 + As a child of the `note` element, add `p` tags inside of which you will put your editorial annotation. If you would like to include a direct quotation from an external source, use `quote` tags instead.
 + As a second child of the `note` element, include a full citation (as you would in an essay) to the relevant source in a pair of `ref` tags. You won't be able to italicize the text, but this is fine.
@@ -127,7 +127,7 @@ If your text comes up only in black, with no paragraph divisions or headings, or
 
 * Placed `</p>` at the end of every paragraph, including the end of the page
 
-* Made sure all your `<persName>`, `<placeName>`, `<interp>` and `<note>` tags are properly enclosed in `<>`s
+* Made sure all your `<persName>`, `<placeName>`, `<seg>` and `<note>` tags are properly enclosed in `<>`s
 
 * Made sure you have both an open `<>` and close `<\>` tag for each tag you use
 
