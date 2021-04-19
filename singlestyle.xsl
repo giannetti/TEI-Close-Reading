@@ -2,9 +2,9 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" xmlns="http://www.w3.org/1999/xhtml"
     version="2.0">
-    <!-- The Firefox XSLT processor only accepts method html. -->
+
     <xsl:output method="xhtml" encoding="UTF-8" indent="yes"/>
-    
+
     <xsl:template match="/">
         <html>
             <head>
@@ -80,8 +80,8 @@
                     </h4>
                 </div>
                 <hr/>
-                <xsl:for-each select="/TEI/text/body/div[@type='letter']">
-                    <xsl:variable name="current_div" select="."/>
+               <xsl:for-each select="/TEI/text/body/div[@type='letter']">
+                   <xsl:variable name="current_div" select="."/>
                     <h3>
                         <xsl:variable name="letter_id" select="$current_div/substring-after(@decls, '#')"/>
                         <xsl:for-each select="/TEI/teiHeader/profileDesc/correspDesc">
@@ -107,7 +107,7 @@
                     <li style="color:#00CC00;text-decoration:none;">Location</li>
                     <li style="color:red;text-decoration:none;">Claim</li>
                 </ul>
-                
+              
             </body>
         </html>
     </xsl:template>
@@ -151,6 +151,9 @@
             <xsl:text> [?]</xsl:text>
         </i>
     </xsl:template>
+    <xsl:template match="del">
+        <del><xsl:apply-templates/></del>
+    </xsl:template>
     <xsl:template match="persName | name[@type='person']">
         <a style="color:blue;text-decoration:none;" href="{@ref}"
             title="{@key}&#013;({@from | @from-iso}-{@to | @to-iso})&#013;{@role}">
@@ -180,7 +183,7 @@
         </a>
     </xsl:template>
     
-    <xsl:template match="note[not(@type='letterhead')] | note[not(@type='annotation')]"/> <!-- ignore editorial notes -->
+    <xsl:template match="note[not(@type='letterhead')]"/> <!-- ignore editorial notes -->
     
     <xsl:template match="pb">
         <h4>Page: <xsl:value-of select="@n"/></h4>
